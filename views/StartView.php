@@ -1,16 +1,13 @@
 <?php
 
-class StartView
+class StartView extends PageView
 {
-  public function render()
+  protected function renderBody()
   {
     ?>
-    <!DOCTYPE html>
-    <html>
-      <body>
-        hery
-      </body>
-    </html>
+    <div>
+      what
+    </div
     <?php
   }
 }
