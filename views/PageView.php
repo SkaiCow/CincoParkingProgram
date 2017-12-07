@@ -17,6 +17,9 @@ abstract class PageView implements View
   function renderMenus()
   {?>
     <body id="pageview">
+      <div class="menu-tab">
+        
+      </div>
   <?php }
 
   abstract protected function renderBody();
