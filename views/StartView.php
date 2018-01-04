@@ -6,7 +6,7 @@ class StartView extends PageView
   {
     ?>
     <div>
-      what
+      <a href="/?p=color">Go to color standards and defaults</a>
     </div
     <?php
   }

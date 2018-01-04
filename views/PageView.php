@@ -17,8 +17,10 @@ abstract class PageView implements View
   function renderMenus()
   {?>
     <body id="pageview">
-      <div class="menu-tab">
-        
+      <div class="menu-bar">
+        <div class="menu-title">
+          <h1>CRHS Parking Program</h1>
+        </div>
       </div>
   <?php }
 

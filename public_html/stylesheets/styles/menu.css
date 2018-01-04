@@ -1,0 +1,23 @@
+.menu-tab
+{
+
+}
+
+.menu-bar
+{
+  position: fixed;
+  margin-top: 0%;
+  background-color: #490000;
+  height: 100px;
+  width: 100%;
+  padding: 0px;
+  z-index: 10;
+  display: table;
+}
+
+.menu-title
+{
+  position: fixed;
+  left: 10%;
+  color: #C4C3C3;
+}

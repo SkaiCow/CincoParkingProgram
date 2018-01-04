@@ -14,7 +14,8 @@ include ('./stylesheets/icon-font.css');
 //note that the order of the files in the list can be significant.
 //include a css file in this list to load it
 $mainFiles = [
-  'defaults.css'
+  'defaults.css',
+  'menu.css'
 ];
 
 foreach($mainFiles as $file) {

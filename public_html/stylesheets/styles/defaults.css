@@ -1,28 +1,50 @@
 body
 {
   background-color: #f2f2f2;
+  margin: 0px;
 }
 h1
 {
   font-family: arial;
   font-size: 4em;
+  margin: 5px;
 }
 h2
 {
   font-family: arial;
   font-size: 3em;
+  margin: 5px;
 }
 h3
 {
   font-family: arial;
   font-size: 2em;
+  margin: 5px;
 }
 h4
 {
   font-family: arial;
   font-size: 1.3em;
+  margin: 5px;
 }
 p
 {
   font-size: 1.2em;
+  margin: 5px;
+}
+
+.defaults-page
+{
+  padding: 100px 15% 10px 15%;
+}
+
+.defaults-container
+{
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 20px #888888;
 }
