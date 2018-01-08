@@ -21,3 +21,38 @@
   left: 10%;
   color: #C4C3C3;
 }
+
+.menu-nav-container
+{
+  height: 75px;
+  width: 75px;
+  position: fixed;
+  right: 10%;
+  top: 12px;
+}
+
+.menu-nav-bar
+{
+  width: 100%;
+  height: 12px;
+  background-color: #C4C3C3;
+}
+
+#nav-top
+{
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+#nav-mid
+{
+  position: absolute;
+  top: 32px;
+  left: 0px;
+}
+#nav-bot
+{
+  position: absolute;
+  top: 54px;
+  left: 0px;
+}
