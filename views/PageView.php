@@ -30,6 +30,12 @@ abstract class PageView implements View
       </div>
       <div class="menu-sidebar-container">
         <div class="menu-sidebar-exit">
+          <img src="/images/exit.png" height="100%" width="100%">
+        </div>
+        <span>CRHS</span>
+        <div class="menu-nav-button-container">
+          <div class="menu-nav-button" onclick="/?p=start">home</div>
+          <a href="/?p=color" class="menu-nav-button">color</a>
         </div>
       </div>
   <?php }

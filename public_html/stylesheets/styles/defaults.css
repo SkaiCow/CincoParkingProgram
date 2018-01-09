@@ -33,6 +33,21 @@ p
   margin: 5px;
 }
 
+a:link
+{
+  color: #A81D1D;
+}
+
+a:visited
+{
+  color: #800000;
+}
+
+a:active
+{
+  color: #E05858;
+}
+
 .defaults-page
 {
   padding: 100px 15% 10px 15%;
