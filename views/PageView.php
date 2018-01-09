@@ -28,6 +28,10 @@ abstract class PageView implements View
           <div class="menu-nav-bar" id="nav-bot"></div>
         </div>
       </div>
+      <div class="menu-sidebar-container">
+        <div class="menu-sidebar-exit">
+        </div>
+      </div>
   <?php }
 
   abstract protected function renderBody();
