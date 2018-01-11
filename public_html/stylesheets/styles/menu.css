@@ -72,13 +72,12 @@
   top: 0px;
   width: 25%;
   height: 100%;
-  background-color: rgba(240,239,239,1);
+  background-color: #F0EFEF;
   z-index: 11;
   border-left: 3px solid #490000;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  opacity: .95;
 }
 
 .menu-sidebar-container > span
@@ -128,4 +127,9 @@
 .menu-nav-button-container :hover
 {
   background-color: rgba(10,8,8,.1);
+}
+
+.menu-nav-button-link
+{
+  text-decoration: none;
 }

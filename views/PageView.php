@@ -32,13 +32,13 @@ abstract class PageView implements View
         <div class="menu-sidebar-exit">
           <img src="/images/exit.png" height="100%" width="100%">
         </div>
-        <span>CRHS</span>
-        <a href="/?p=start">
+        <span><b>CRHS</b></span>
+        <a href="/?p=start" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Home</div>
           </div>
         </a>
-        <a href="/?p=color">
+        <a href="/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Color</div>
           </div>
