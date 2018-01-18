@@ -72,23 +72,12 @@
   top: 0px;
   width: 25%;
   height: 100%;
-  background-color: #F0EFEF;
+  background: linear-gradient(to top, #F0EFEF,white);
   z-index: 11;
   border-left: 3px solid #490000;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-
-.menu-sidebar-container > span
-{
-  position: relative;
-  top: 65px;
-  right: 0px;
-  margin: 0px auto;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 3.4em;
-  color: #800000;
 }
 
 .menu-sidebar-exit
@@ -126,10 +115,28 @@
 
 .menu-nav-button-container :hover
 {
-  background-color: rgba(10,8,8,.1);
+  background: linear-gradient(to left, #ea9a9a,#F0EFEF,#F0EFEF);
 }
 
 .menu-nav-button-link
 {
   text-decoration: none;
+}
+
+.menu-divider
+{
+  width: 100%;
+  padding: 5px 0px 5px 0px;
+  position: relative;
+  top: 65px;
+  right: 0px;
+  border-bottom: 3px solid #490000;
+}
+
+.menu-divider > center > span
+{
+  margin: 0px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.2em;
+  color: #800000;
 }

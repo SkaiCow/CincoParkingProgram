@@ -32,7 +32,11 @@ abstract class PageView implements View
         <div class="menu-sidebar-exit">
           <img src="/images/exit.png" height="100%" width="100%">
         </div>
-        <span><b>CRHS</b></span>
+        <div class="menu-divider">
+          <center>
+            <span><b>Menu</b></span>
+          </center>
+        </div>
         <a href="/?p=start" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Home</div>
@@ -41,6 +45,21 @@ abstract class PageView implements View
         <a href="/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Color</div>
+          </div>
+        </a>
+        <a href="/?p=color" class="menu-nav-button-link">
+          <div class="menu-nav-button-container">
+            <div class="menu-nav-button">Enter ID</div>
+          </div>
+        </a>
+        <a href="/?p=color" class="menu-nav-button-link">
+          <div class="menu-nav-button-container">
+            <div class="menu-nav-button">Search</div>
+          </div>
+        </a>
+        <a href="/?p=color" class="menu-nav-button-link">
+          <div class="menu-nav-button-container">
+            <div class="menu-nav-button">Parking Map</div>
           </div>
         </a>
       </div>
