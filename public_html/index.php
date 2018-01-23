@@ -52,6 +52,9 @@ switch ($controller)
   case 'color':
     (new ColorController($action))->display();
   break;
+  case 'user':
+    (new UsersController($action))->display();
+  break;
 }
 
 $length = microtime(true) - $startTime;
