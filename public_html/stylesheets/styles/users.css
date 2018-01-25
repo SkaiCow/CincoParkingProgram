@@ -1,0 +1,24 @@
+.users-table
+{
+  width: 90%;
+  border: 2px solid black;
+  margin: 0px auto;
+  border-collapse: collapse;
+}
+.users-table-header
+{
+  border: 2px solid black;
+}
+.users-table-row
+{
+  border-bottom: : 1px solid black;
+}
+.users-table-row > td
+{
+  border: 1px solid grey;
+  padding-left: 10px;
+}
+.user-blank
+{
+  background-color: red;
+}
