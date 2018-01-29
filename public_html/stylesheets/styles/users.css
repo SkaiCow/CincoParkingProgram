@@ -18,7 +18,41 @@
   border: 1px solid grey;
   padding-left: 10px;
 }
-.user-blank
+.user-cell-blank
 {
   background-color: red;
+}
+.user-cell-good
+{
+  background-color: green;
+}
+
+.users-edit
+{
+  background-image: url("icon-copy");
+}
+
+.users-add-table
+{
+  margin: 0px auto;
+  border-collapse: collapse;
+  width: 80%;
+  border: 2px solid black;
+
+}
+
+.user-add-tr > th
+{
+  border: 1px solid grey;
+}
+
+.user-add-tr > td
+{
+  overflow: hidden;
+}
+
+.user-add-tr > td > input
+{
+  width: 100%;
+  margin: 0px;
 }
