@@ -18,18 +18,29 @@
   border: 1px solid grey;
   padding-left: 10px;
 }
-.user-cell-blank
+.users-cell-blank
 {
   background-color: red;
 }
-.user-cell-good
+.users-cell-good
 {
   background-color: green;
 }
 
 .users-edit
 {
-  background-image: url("icon-copy");
+  padding: 0px;
+
+}
+
+.users-add-container
+{
+  display: inline-block;
+}
+.users-add-container > img
+{
+  display: inline-block;
+  float: right;
 }
 
 .users-add-table
