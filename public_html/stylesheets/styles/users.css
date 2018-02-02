@@ -30,17 +30,17 @@
 .users-edit
 {
   padding: 0px;
-
+  cursor: pointer;
 }
 
 .users-add-container
 {
   display: inline-block;
 }
-.users-add-container > img
+.users-enter
 {
   display: inline-block;
-  float: right;
+  cursor: pointer;
 }
 
 .users-add-table
@@ -49,7 +49,7 @@
   border-collapse: collapse;
   width: 80%;
   border: 2px solid black;
-
+  display: inline-block;
 }
 
 .user-add-tr > th

@@ -10,37 +10,41 @@ class UsersView extends PageView
       <div class="defaults-container">
         <h3>Add student to list</h3>
         <div class="users-add-container">
-          <table class="users-add-table">
-            <tr class="user-add-tr">
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Grade</th>
-              <th>Stutent ID</th>
-              <th>Spot Name</th>
-              <th>Spot Number</th>
-              <th>Sticker Number</th>
-              <th>Car Color</th>
-              <th>Car Make</th>
-              <th>Car Model</th>
-              <th>Car Year</th>
-              <th>License Number</th>
-            </tr>
-            <tr class="user-add-tr">
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
-            </tr>
-          </table>
-          <img src="/images/right-icon.png" height="50px" width="50px"></img>
+          <center>
+            <table class="users-add-table">
+              <tr class="user-add-tr">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Grade</th>
+                <th>Stutent ID</th>
+                <th>Spot Name</th>
+                <th>Spot Number</th>
+                <th>Sticker Number</th>
+                <th>Car Color</th>
+                <th>Car Make</th>
+                <th>Car Model</th>
+                <th>Car Year</th>
+                <th>License Number</th>
+              </tr>
+              <tr class="user-add-tr">
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+              </tr>
+            </table>
+            <div class="users-enter">
+              <img src="/images/right-icon.png" height="50px" width="50px"></img>
+            </div>
+          </center>
         </div>
         <h3>View student list</h3>
         <table class="users-table">
@@ -63,7 +67,7 @@ class UsersView extends PageView
             foreach ($users as $user) {
             ?>
             <tr class="users-table-row">
-              <td class="users-edit"><img src="/images/tool.png" height="20px" width="20px"></img</td>
+              <td class="users-edit"><img src="/images/tool.png" height="20px" width="20px"></img></td>
               <td><?= $user['first_name']?></th>
               <td><?= $user['last_name']?></th>
               <td><?= $user['grade']?></th>

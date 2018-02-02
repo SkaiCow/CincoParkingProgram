@@ -44,11 +44,6 @@ abstract class PageView implements View
         </a>
         <a href="/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
-            <div class="menu-nav-button">Color</div>
-          </div>
-        </a>
-        <a href="/?p=color" class="menu-nav-button-link">
-          <div class="menu-nav-button-container">
             <div class="menu-nav-button">Enter ID</div>
           </div>
         </a>
