@@ -6,7 +6,7 @@ abstract class Controller {
     $this->action = $action;
   }
 
-  public function display()
+  public function executeAction()
   {
     if(method_exists(get_class($this), $this->action))
     {

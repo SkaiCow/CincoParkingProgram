@@ -41,19 +41,22 @@ $config = new Configuration($fileRoot . 'config.ini');
 //set up and load session information (such as the logged in user)
 //Session::setup();
 
-$controller = isset($_GET['p']) ? $_GET['p'] : 'start';
+$controller = isset($_GET['p']) ? $_GET['p'] : 'login';
 $action = isset($_GET['do']) ? $_GET['do'] : 'display';
 
 switch ($controller)
 {
   case 'start':
-    (new StartController($action))->display();
+    (new StartController($action))->executeAction();
   break;
   case 'color':
-    (new ColorController($action))->display();
+    (new ColorController($action))->executeAction();
   break;
   case 'user':
-    (new UsersController($action))->display();
+    (new UsersController($action))->executeAction();
+  break;
+  case 'login':
+    (new LoginController($action))->executeAction();
   break;
 }
 
