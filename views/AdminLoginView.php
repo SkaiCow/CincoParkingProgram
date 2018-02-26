@@ -7,7 +7,7 @@ class AdminLoginView extends PageView
     ?>
     <div class="defaults-page">
       <div class="defaults-container">
-        hey
+        admin
       </div>
     </div>
     <?php

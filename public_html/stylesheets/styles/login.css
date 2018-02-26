@@ -1,0 +1,51 @@
+.login-body
+{
+  height: 100%;
+  width: 100%;
+}
+.login-container
+{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: radial-gradient(#A81D1D,#800000);
+  background-size: cover;
+}
+.login-image
+{
+  position: relative;
+  left: -90px;
+  top: 0px;
+}
+.login-image-container
+{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 50px auto 0px auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 9px 10px 29px 0px rgba(0,0,0,1);
+  -moz-box-shadow: 9px 10px 29px 0px rgba(0,0,0,1);
+  box-shadow: 9px 10px 29px 0px rgba(0,0,0,1);
+}
+.login-input-container
+{
+  width: 400px;
+  height: 50px;
+  background-color: #F0EFEF;
+  overflow: hidden;
+}
+.login-enter
+{
+  float: right;
+  height: 50px;
+  width: 50px;
+  border-left: 2px solid grey;
+}
+.login-input
+{
+  float: left;
+  width: 350px;
+  height: 100%;
+  font-size: 75%;
+}

@@ -16,7 +16,8 @@ include ('./stylesheets/icon-font.css');
 $mainFiles = [
   'defaults.css',
   'menu.css',
-  'users.css'
+  'users.css',
+  'login.css'
 ];
 
 foreach($mainFiles as $file) {
