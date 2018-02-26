@@ -20,7 +20,7 @@ abstract class PageView implements View
     <body id="pageview">
       <div class="menu-bar">
         <div class="menu-title">
-          <h1>CRHS Parking Program</h1>
+          <h1>CRHS Parking Admin</h1>
         </div>
         <div class="menu-nav-container">
           <div class="menu-nav-bar" id="nav-top"></div>
@@ -37,27 +37,27 @@ abstract class PageView implements View
             <span><b>Menu</b></span>
           </center>
         </div>
-        <a href="/?p=start" class="menu-nav-button-link">
+        <a href="/Admin/?p=start" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Home</div>
           </div>
         </a>
-        <a href="/?p=color" class="menu-nav-button-link">
+        <a href="/Admin/?p=enterID" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Enter ID</div>
           </div>
         </a>
-        <a href="/?p=user" class="menu-nav-button-link">
+        <a href="/Admin/?p=user" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">View Table</div>
           </div>
         </a>
-        <a href="/?p=color" class="menu-nav-button-link">
+        <a href="/Admin/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Search</div>
           </div>
         </a>
-        <a href="/?p=color" class="menu-nav-button-link">
+        <a href="/Admin/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Parking Map</div>
           </div>

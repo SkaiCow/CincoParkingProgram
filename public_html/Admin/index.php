@@ -42,12 +42,24 @@ $config = new Configuration($fileRoot . 'config.ini');
 //Session::setup();
 
 $controller = isset($_GET['p']) ? $_GET['p'] : 'login';
-$action = isset($_GET['do']) ? $_GET['do'] : 'display';
+$action = isset($_GET['do']) ? $_GET['do'] : 'adminDisplay';
 
 switch ($controller)
 {
+  case 'start':
+    (new StartController($action))->executeAction();
+  break;
+  case 'color':
+    (new ColorController($action))->executeAction();
+  break;
+  case 'user':
+    (new UsersController($action))->executeAction();
+  break;
   case 'login':
     (new LoginController($action))->executeAction();
+  break;
+  case 'enterID':
+    (new EnterIDController($action))->executeAction();
   break;
 }
 

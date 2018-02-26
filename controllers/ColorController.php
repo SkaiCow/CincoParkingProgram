@@ -2,7 +2,7 @@
 
 class ColorController extends Controller
 {
-  public function display()
+  public function adminDisplay()
   {
     (new ColorView())->render();
   }

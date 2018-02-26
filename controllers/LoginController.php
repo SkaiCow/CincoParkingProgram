@@ -7,7 +7,7 @@ class LoginController extends Controller
     (new StudentLoginView())->render();
   }
 
-  public function admin()
+  public function adminDisplay()
   {
     (new AdminLoginView())->render();
   }

@@ -22,6 +22,7 @@ class StudentLoginView
             <div class="login-input-container">
               <input class="login-input" placeholder="A1000000">
               <div class="login-enter">
+                <img src="/images/Enter.png" height="50px" width="50px">
               </div>
             </div>
           </center>

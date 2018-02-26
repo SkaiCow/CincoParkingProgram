@@ -2,7 +2,7 @@
 
 class StartController extends Controller
 {
-  public function display()
+  public function adminDisplay()
   {
     (new StartView())->render();
   }

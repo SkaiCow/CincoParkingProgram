@@ -2,7 +2,7 @@
 
 class UsersController extends Controller
 {
-  public function display()
+  public function adminDisplay()
   {
     (new UsersView())->render();
   }
