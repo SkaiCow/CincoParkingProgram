@@ -16,7 +16,16 @@ class EnterInfoView extends StudentsView
             <li><p>Last name: <input placeholder="Lasater"></p></li>
             <li><p>Student ID: <input placeholder="A1000000"></p></li>
           </ul>
+          <h4>Spot Info</h4>
+          <ul>
+            <li><p>Spot name: <input placeholder="Kool kid"></p></li>
+            <li><p>Sticker Number: <input placeholder="1234567"></p></li>
+          </ul>
           <h4>Car Info</h4>
+          <ul>
+            <li><p>Car Color: <input placeholder=""></p></li>
+            <li><p>Sticker Number: <input placeholder="1234567"></p></li>
+          </ul>
         </div>
       </div>
     </div>
