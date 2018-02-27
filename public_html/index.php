@@ -49,6 +49,9 @@ switch ($controller)
   case 'login':
     (new LoginController($action))->executeAction();
   break;
+  case 'students':
+    (new StudentsController($action))->executeAction();
+  break;
 }
 
 $length = microtime(true) - $startTime;

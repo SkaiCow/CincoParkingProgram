@@ -11,11 +11,10 @@ abstract class StudentsView implements View
         <link rel="stylesheet" type="text/css" href="/SuperCSSLoader.php">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
       </head>
-  <?php}
+    <?php }
 
-  function renderMenu()
-  {
-    ?>
+    function renderMenus()
+    {?>
     <body id="pageview">
       <div class="menu-bar">
         <div class="menu-title">
