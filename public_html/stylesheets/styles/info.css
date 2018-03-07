@@ -5,3 +5,26 @@
   padding: 10px;
   border-top: 1px solid grey;
 }
+
+.info-button
+{
+  width: 125px;
+  height: 40px;
+  background: linear-gradient(#A81D1D, #800000);
+  margin: 20px 0px;
+  border-radius: 5px;
+  border: 2px solid #800000;
+  cursor: pointer;
+}
+
+.info-button:hover
+{
+  background: linear-gradient(#800000, #A81D1D);
+}
+
+.info-enter
+{
+  font-size: 25px;
+  height: 100%;
+  color: white;
+}

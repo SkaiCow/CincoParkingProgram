@@ -53,3 +53,9 @@
   margin: 0px;
   display: inline-block;
 }
+.login-dropdown
+{
+  width: 346px;
+  height: 50px;
+  font-size: 70%;
+}

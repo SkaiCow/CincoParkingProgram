@@ -23,9 +23,27 @@ class EnterInfoView extends StudentsView
           </ul>
           <h4>Car Info</h4>
           <ul>
-            <li><p>Car Color: <input placeholder=""></p></li>
-            <li><p>Sticker Number: <input placeholder="1234567"></p></li>
+            <li><p>Car Color:
+              <select>
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Black</option>
+                <option>Grey</option>
+                <option>White</option>
+                <option>Red</option>
+                <option>Purple</option>
+                <option>Yellow</option>
+                <option>Orange</option>
+              </select>
+            </li>
+            <li><p>Make: <input placeholder="Nessan"></p></li>
+            <li><p>Model: <input placeholder="Sentra"></p></li>
+            <li><p>Year: <input placeholder="2036"></p></li>
+            <li><p>License Plate Number: <input placeholder="1234567"></p></li>
           </ul>
+          <div class="help">
+          <div class="info-button"><h4 class="info-enter">Enter</h4></div>
+        </div>
         </div>
       </div>
     </div>
