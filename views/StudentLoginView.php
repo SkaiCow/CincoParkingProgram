@@ -24,12 +24,7 @@ class StudentLoginView
               <div class="login-enter">
                 <img src="/images/Enter.png" height="50px" width="50px">
               </div>
-            </div><br>
-            <select class="login-dropdown">
-              <option>Senior</option>
-              <option>Junior</option>
-              <option>Sophmore</option>
-            </select>
+            </div>
           </center>
         </div>
       </body>
