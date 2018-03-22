@@ -52,6 +52,9 @@ switch ($controller)
   case 'students':
     (new StudentsController($action))->executeAction();
   break;
+  case 'map':
+    (new MapController($action))->executeAction();
+  break;
 }
 
 $length = microtime(true) - $startTime;

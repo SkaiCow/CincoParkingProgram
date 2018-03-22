@@ -19,7 +19,8 @@ $mainFiles = [
   'users.css',
   'login.css',
   'enterID.css',
-  'info.css'
+  'info.css',
+  'map.css'
 ];
 
 foreach($mainFiles as $file) {

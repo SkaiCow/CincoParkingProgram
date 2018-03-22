@@ -1,0 +1,60 @@
+.map-pac-selecter
+{
+  position: absolute;
+  top: 54%;
+  right: 68%;
+  height: 33%;
+  width: 16%;
+}
+.map-pac-selecter :hover
+{
+  opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.map-senior-selecter
+{
+  position: absolute;
+  top: 49%;
+  right: 23%;
+  height: 43%;
+  width: 21%;
+}
+.map-senior-selecter :hover
+{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.map-athletic-selecter
+{
+  position: absolute;
+  top: 52%;
+  right: 5%;
+  height: 46%;
+  width: 25%;
+}
+.map-athletic-selecter :hover
+{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.map-softmore-selecter
+{
+  position: absolute;
+  top: 50%;
+  right: 49%;
+  height: 34%;
+  width: 24%;
+}
+.map-softmore-selecter :hover
+{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.map-selecter-container
+{
+  position: relative;
+  background-image: url("/images/Copy of overview.jpg");
+  background-size: 100% 100%;
+  height: 70vh;
+  width: 90%;
+}
