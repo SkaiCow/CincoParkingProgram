@@ -11,6 +11,10 @@ class EnterIDController extends Controller
     $id = $_POST["ID"];
     lcfirst($id);
     $goodID = TRUE;
+    if(!ctype_alpha($id[0]))
+    {
+      $goodID = FALSE;
+    }
     for($i = 1; $i < strlen($id); $i++)
     {
       $char = $id[$i];
@@ -19,8 +23,21 @@ class EnterIDController extends Controller
         $goodID = FALSE;
       }
     }
-    (new AdminDatabaseModel())->addAuthorizedID($id);
-    (new EnterIDView())->render();
+    if(strlen($id) != 8)
+    {
+      $goodID = FALSE;
+    }
+    if($goodID)
+    {
+      (new AdminDatabaseModel())->addAuthorizedID($id);
+      //$_POST['IDGood'] = "TRUE";
+      (new EnterIDController("adminDisplay"))->adminDisplay();
+    }
+    else
+    {
+      //$_POST['IDGood'] = "FALSE";
+      (new EnterIDController("adminDisplay"))->adminDisplay();
+    }
   }
 }
  ?>
