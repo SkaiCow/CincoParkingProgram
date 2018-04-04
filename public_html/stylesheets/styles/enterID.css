@@ -6,7 +6,27 @@
   padding: 10px 0px 0px 0px;
   border-top: 1px solid grey;
 }
+
 .enterID-input
 {
-  
+
+}
+
+.enterID-entry-row
+{
+  background-color: rgba(234, 204, 68, .3);
+  border: 2px solid #d8b722;
+  width: 80%;
+  border-radius: 3px;
+
+}
+
+.enterID-entry-row > td
+{
+  vertical-align: center;
+}
+
+.enterID-entry-table
+{
+  border-collapse: collapse;
 }

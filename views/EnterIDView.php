@@ -10,19 +10,25 @@ class EnterIDView extends PageView
         <h2>Enter Student ID Page</h2>
         <div class="enterId-container">
           <h3>Add student to list</h3>
-          <form action="/Admin/?p=enterID&do=submit" method="post">
-            <input class="enterID-input" placeholder="A1000000" name="ID"><input type="submit" value="Submit">
+          <form id="enterid-form">
+            <input class="enterID-input" placeholder="A1000000" id="ID">
+            <input type="submit" value="Submit">
           </form><br>
         </div>
-        <div class="enterId-container">
+        <div class="enterId-container" style="padding-bottom:20px;">
           <h4>Students in list</h4><br>
-          <?php
-            foreach ($studentIDs as $id) {
-              ?>
-                <p><?= $id['student_id']?></p>
-              <?php
-            }
-           ?>
+          <table class="enterID-entry-table">
+            <?php
+              foreach ($studentIDs as $id) {
+                ?>
+                <tr class="enterID-entry-row">
+                  <td><img src="/images/exit.png" height="20px" width="20px"></td>
+                  <td><p><?= ucfirst($id['student_id'])?></p></td>
+                </tr>
+                <?php
+              }
+            ?>
+          </table>
         </div>
       </div>
     </div>
