@@ -8,6 +8,18 @@ class MapController extends Controller
   }
   public function seniorlot()
   {
-    (new SeniorLotView())->render();
+    (new MapView())->render();
+  }
+  public function softmorelot()
+  {
+    (new MapView())->render();
+  }
+  public function paclot()
+  {
+    (new MapView())->render();
+  }
+  public function lot()
+  {
+    (new MapView())->render();
   }
 }

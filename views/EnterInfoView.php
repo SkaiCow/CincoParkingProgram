@@ -1,5 +1,5 @@
 <?php
-class EnterInfoView extends StudentsView
+class EnterInfoView extends StudentsPageView
 {
   protected $title = 'CRHS parking - Student Info';
 

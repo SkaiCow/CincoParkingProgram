@@ -1,5 +1,5 @@
 <?php
-class MapHubView extends StudentsView
+class MapHubView extends StudentsPageView
 {
   protected $title = 'CRHS parking - Map Hub';
 
