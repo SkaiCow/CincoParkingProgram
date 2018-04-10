@@ -131,3 +131,10 @@
   font-size: 20px;
   color: #490000;
 }
+
+.map-car-red
+{
+  background-image: url("/images/");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
