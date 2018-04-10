@@ -15,6 +15,13 @@ class EnterInfoView extends StudentsPageView
             <li><p>First name: <input placeholder="William"></p></li>
             <li><p>Last name: <input placeholder="Lasater"></p></li>
             <li><p>Student ID: <input placeholder="A1000000"></p></li>
+            <li><p>Grade Level:
+              <select>
+                <option>Softmore</option>
+                <option>Junior</option>
+                <option>Senior</option>
+              </select>
+            </li>
           </ul>
           <h4>Spot Info</h4>
           <ul>
@@ -34,6 +41,9 @@ class EnterInfoView extends StudentsPageView
                 <option>Purple</option>
                 <option>Yellow</option>
                 <option>Orange</option>
+                <option>Indigo</option>
+                <option>Pink</option>
+                <option>Tan</option>
               </select>
             </li>
             <li><p>Make: <input placeholder="Nessan"></p></li>
