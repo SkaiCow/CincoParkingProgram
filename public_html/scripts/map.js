@@ -7,4 +7,10 @@ $(document).ready(function() {
     $(this).children().css("display","none");
   })
 
+
+
 });
+  function gotolot(lot)
+  {
+    $.ajax({url: "Admin/?p=login&do=seniorlot"});
+  }
