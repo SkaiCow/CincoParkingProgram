@@ -19,7 +19,7 @@ abstract class StudentsPageView implements View
     <body id="pageview">
       <div class="menu-bar">
         <div class="menu-title">
-          <h1>CRHS Parking Program</h1>
+          <h1>CRHS Parking Reservations</h1>
         </div>
       </div>
     <?php

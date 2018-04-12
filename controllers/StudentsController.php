@@ -6,4 +6,8 @@ class StudentsController extends Controller
   {
     (new EnterInfoView())->render();
   }
+  public function done()
+  {
+    (new DoneView())->render();
+  }
 }
