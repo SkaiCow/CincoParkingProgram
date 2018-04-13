@@ -13,7 +13,7 @@ class MapView extends StudentsPageView
       <div class="defaults-container">
         <h3><?= ucfirst(substr($lot,0,strlen($lot)-3))?> Lot</h3>
         <center>
-          <div style="overflow: auto;">
+          <div class="map-overflow">
             <div class="map-hover" onclick="gotohub()">
               <div class="map-back">
                 <img src="/images/back.png" width="auto" height="auto">
@@ -22,7 +22,6 @@ class MapView extends StudentsPageView
             </div>
             <div class="map-crop">
               <div class="map-<?= $lot?>-container">
-
                 <?php
                   foreach($spots as $spot)
                   {
