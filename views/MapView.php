@@ -38,11 +38,12 @@ class MapView extends StudentsPageView
                     else
                     {
                       ?>
-                      <img src="/images/cars/<?= $spot['color']?>car.png" class="map-car"  style="top:<?= $spot['pos_y']?>%;left:<?= $spot['pos_x']?>%;width:<?= $spot['width']+.4?>%;height:<?= $spot['height']+.2?>%;"></div>
+                      <img src="/images/cars/<?= $spot['color']?>car.png" class="map-car"  style="top:<?= $spot['pos_y']?>%;left:<?= $spot['pos_x']?>%;width:<?= $spot['width']+.4?>%;height:<?= $spot['height']+.2?>%;">
                       <?php
                     }
                   }
                   ?>
+                  </div>
                   <!--
                   <div class="map-button" style="top:51%;left:55.6%;" id="1623"><div class="map-popup"><div>1623</div></div></div> this is what an empty spot would look like
                 -->
