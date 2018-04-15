@@ -9,7 +9,8 @@
 .map-pac-selecter :hover
 {
   opacity: 0.5;
-    filter: alpha(opacity=50);
+  filter: alpha(opacity=50);
+  cursor: pointer;
 }
 .map-senior-selecter
 {
@@ -23,6 +24,7 @@
 {
   opacity: 0.5;
   filter: alpha(opacity=50);
+  cursor: pointer;
 }
 .map-athletic-selecter
 {
@@ -36,6 +38,7 @@
 {
   opacity: 0.5;
   filter: alpha(opacity=50);
+  cursor: pointer;
 }
 .map-softmore-selecter
 {
@@ -49,6 +52,7 @@
 {
   opacity: 0.5;
   filter: alpha(opacity=50);
+  cursor: pointer;
 }
 .map-selecter-container
 {
@@ -62,36 +66,91 @@
 .map-seniorlot-container
 {
   position: relative;
+  left: -20%;
+  top: -10%;
   background-image: url("/images/1600.png");
   background-size: 100% 100%;
-  height: 70vh;
-  width: 90%;
+  height: 120%;
+  width: 120%;
+  min-width: 800px;
 }
 
 .map-softmorelot-container
 {
   position: relative;
+  left: -16%;
+  top: 0px;
   background-image: url("/images/1200.png");
   background-size: 100% 100%;
-  height: 70vh;
-  width: 90%;
+  height: 100%;
+  width: 140%;
+  min-width: 800px;
 }
 
 .map-athleticlot-container
 {
   position: relative;
+  left: 0%;
+  top: 0px;
   background-image: url("/images/athletic.png");
   background-size: 100% 100%;
-  height: 70vh;
-  width: 90%;
+  height: 120%;
+  width: 125%;
+  min-width: 800px;
 }
 
 .map-paclot-container
 {
   position: relative;
-  background-image: url("/images/1600.png");
+  left: -10%;
+  top: 0px;
+  background-image: url("/images/pac.png");
   background-size: 100% 100%;
+  height: 100%;
+  width: 130%;
+  min-width: 800px;
+}
+
+.map-crop
+{
+  overflow: hidden;
   height: 70vh;
+  width: 100%;
+}
+
+.map-back
+{
+  background: rgba(165, 173, 186, .8);
+  border: 2px solid #a5adba;
+  color: #636870;
+  width: 100px;
+  height: 35px;
+  font-size: 150%;
+  font-family: arial black;
+  padding: 0px;
+}
+
+.map-hover
+{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.map-hover :hover
+{
+  opacity: .8;
+  cursor: pointer;
+
+}
+
+.map-overflow
+{
+  overflow: auto;
+  position: relative;
+  left: 0px;
+  top: 0px;
   width: 90%;
 }
 
@@ -132,9 +191,7 @@
   color: #490000;
 }
 
-.map-car-red
+.map-car
 {
-  background-image: url("/images/");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: absolute;
 }

@@ -18,7 +18,7 @@ class MapController extends Controller
   {
     (new MapView())->render();
   }
-  public function lot()
+  public function athleticlot()
   {
     (new MapView())->render();
   }

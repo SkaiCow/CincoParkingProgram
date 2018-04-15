@@ -12,5 +12,9 @@ $(document).ready(function() {
 });
   function gotolot(lot)
   {
-    $.ajax({url: "Admin/?p=login&do=seniorlot"});
+    location.replace("/?p=map&do="+lot);
+  }
+  function gotohub()
+  {
+    location.replace("/?p=map");
   }
