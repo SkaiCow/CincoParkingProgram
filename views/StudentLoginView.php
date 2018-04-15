@@ -20,10 +20,12 @@ class StudentLoginView
           <center>
           <h2 style="color: #F0EFEF;">Student ID<h2>
             <div class="login-input-container">
-              <input class="login-input" placeholder="A1000000">
-              <div class="login-enter">
-                <img src="/images/Enter.png" height="50px" width="50px">
-              </div>
+              <form action="/?p=login&do=login" method="post">
+                <input type="text" name="id" class="login-input" placeholder="A1000000">
+                <div class="login-enter">
+                  <input type="image" src="/images/Enter.png" border="0" alt="Submit"/>
+                </div>
+              </form>
             </div>
           </center>
         </div>
