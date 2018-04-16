@@ -44,13 +44,12 @@ class MapView extends StudentsPageView
                   }
                   ?>
                   </div>
-                  <!--
-                  <div class="map-button" style="top:51%;left:55.6%;" id="1623"><div class="map-popup"><div>1623</div></div></div> this is what an empty spot would look like
-                -->
+                  <div class="map-button" style="top:3.8%;left:38.2%;width:2.4%;height:5.5%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
               </div>
             </div>
           </div>
         </center>
+        <button id="addrowbutton">enter row</button>
       </div>
     </div>
     <?php

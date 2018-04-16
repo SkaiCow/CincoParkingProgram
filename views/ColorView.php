@@ -1,6 +1,6 @@
 <?php
 
-class ColorView extends PageView
+class ColorView extends AdminPageView
 {
   protected function renderBody()
   {

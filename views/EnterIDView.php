@@ -1,5 +1,5 @@
 <?php
-class EnterIDView extends PageView
+class EnterIDView extends AdminPageView
 {
   protected function renderBody()
   {

@@ -1,6 +1,6 @@
 <?php
 
-class StartView extends PageView
+class StartView extends AdminPageView
 {
   protected function renderBody()
   {

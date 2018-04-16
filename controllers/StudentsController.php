@@ -2,9 +2,9 @@
 
 class StudentsController extends Controller
 {
-	public function display()
-	{
-		if(Session::isLoggedIn())
+  public function display()
+  {
+    if(Session::isLoggedIn())
 		{
 			if(!Session::isAdmin())
 				(new EnterInfoView())->render();
@@ -15,7 +15,17 @@ class StudentsController extends Controller
 		{
 			header("Location: /?p=login");
 		}
-	}
+  }
+
+  public function done()
+  {
+    (new DoneView())->render();
+  }
+
+  public function wait()
+  {
+    (new WaitView())->render();
+  }
 
 	public function enterInfo()
 	{

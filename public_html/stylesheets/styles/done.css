@@ -1,0 +1,16 @@
+.done-info-container
+{
+  display: block;
+}
+
+.done-wait-container
+{
+  display: block;
+  padding: 50px 40px;
+  font-size: 1.2em;
+  font-family: arial;
+}
+.done-confirmed-container
+{
+  display: none;
+}
