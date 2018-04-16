@@ -52,8 +52,8 @@ class EnterInfoView extends StudentsPageView
             <li><p>License Plate Number: <input placeholder="1234567"></p></li>
           </ul>
           <div class="help">
-          <div class="info-button"><center><h4 class="info-enter">Enter</h4></center></div>
-        </div>
+            <div class="info-button"><center><h4 class="info-enter">Enter</h4></center></div>
+          </div>
         </div>
       </div>
     </div>

@@ -10,4 +10,8 @@ class StudentsController extends Controller
   {
     (new DoneView())->render();
   }
+  public function wait()
+  {
+    (new WaitView())->render();
+  }
 }
