@@ -8,7 +8,7 @@ class EnterInfoView extends StudentsPageView
 		?>
 		<div class="defaults-page">
 			<div class="defaults-container">
-				<form action="/?p=students" method="post">
+				<form action="/?p=students&do=enterInfo" method="post" id="info">
 					<h3>Enter Your Info</h3>
 					<div class="Info-container">
 						<h4>Student Info</h4>
@@ -26,6 +26,7 @@ class EnterInfoView extends StudentsPageView
 						<ul>
 							<li><p>Car Color:
 								<select name="car_color">
+									<option selected value="">None Selected</option>
 									<option value="Blue">Blue</option>
 									<option value="Green">Green</option>
 									<option value="Black">Black</option>
@@ -43,7 +44,7 @@ class EnterInfoView extends StudentsPageView
 							<li><p>License Plate Number: <input name="car_license" placeholder="morec02"></p></li>
 						</ul>
 						<div class="help">
-							<div class="info-button"><center><h4 class="info-enter">Enter</h4></center></div>
+							<button class="info-button" type="submit" form="info" value="Submit"><h4 class="info-enter">Enter</h4></button>
 						</div>
 					</div>
 				</form>	

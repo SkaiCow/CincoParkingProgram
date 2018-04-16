@@ -27,6 +27,11 @@ class Session
 	{
 		return self::$id;
 	}
+
+	public static function getStudent()
+	{
+		return (new StudentsDatabaseModel())->getStudent(self::$id);
+	}
 	
 	public static function logout() 
 	{

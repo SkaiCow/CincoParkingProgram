@@ -69,6 +69,10 @@ switch ($controller)
 			case 'incorrectpassword':
 				echo "The administrator password you used was incorrect. Go back and try again.";
 				break;
+			case 'nostudentinfo':
+				echo "You must fill out all data-fields for the Student Information form. Go back and fill them out.";
+				break;
+
 		}
 		break;
 }
