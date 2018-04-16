@@ -1,6 +1,6 @@
 <?php
 
-class UsersView extends PageView
+class UsersView extends AdminPageView
 {
   protected function renderBody()
   {

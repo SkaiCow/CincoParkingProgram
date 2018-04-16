@@ -10,7 +10,7 @@ class LoginController extends Controller
 		else
 		{
 			if(Session::isAdmin())
-				header("Location: /?p="); //wherever the admin page is
+				header("Location: /admin/?p=start"); //wherever the admin page is
 			else
 				header("Location: /?p=students");
 		}
@@ -23,7 +23,7 @@ class LoginController extends Controller
 		else
 		{
 			if(Session::isAdmin())
-				header("Location: /?p="); //wherever the admin page is
+				header("Location: /admin/?p=start"); //wherever the admin page is
 			else
 				header("Location: /?p=students");
 		}
