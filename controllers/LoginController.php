@@ -29,6 +29,20 @@ class LoginController extends Controller
 		}
 	}
 
+	public function logout()
+	{
+		if(Session::isAdmin())
+		{
+			Session::logout();
+			header("Location: /?p=login");
+		}
+		else
+		{
+			Session::logout();
+			header("Location: /admin");
+		}
+	}
+
 	public function login()
 	{
 		if(!isset($_POST['id']))
