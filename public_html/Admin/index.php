@@ -61,6 +61,9 @@ switch ($controller)
   case 'enterID':
     (new EnterIDController($action))->executeAction();
   break;
+  case 'approve':
+    (new ApproveController($action))->executeAction();
+  break;
 }
 
 $length = microtime(true) - $startTime;

@@ -42,5 +42,27 @@ class AdminDatabaseModel extends DatabaseModel
     return TRUE;
   }
 
+  public function getApproveRequests()
+  {
+    $query = self::$conn->prepare(
+      'SELECT *'.
+      'FROM students '.
+      'WHERE approved = 1');
+    $query->execute();
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+    $result = array_filter($result);
+    if(empty($result))
+    {
+      return 'none';
+    }
+    else
+    {
+
+      return $result;
+    }
+
+
+  }
+
 }
 ?>
