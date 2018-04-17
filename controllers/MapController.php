@@ -4,20 +4,7 @@ class MapController extends Controller
 {
   public function display()
   {
-    if(Session::isLoggedIn())
-    {
-      if(!Session::isAdmin())
-      {
-        //evaluate a condition to make sure the user hasn't already selected a spot
-        (new MapHubView())->render();
-      }
-      else
-        header("Location: /?p=error&message=adminnostudentpage");
-    }
-    else
-    {
-      header("Location: /?p=login");
-    }
+    (new MapHubView())->render();
   }
   public function seniorlot()
   {
@@ -29,7 +16,6 @@ class MapController extends Controller
   }
   public function paclot()
   {
-
     (new MapView())->render();
   }
   public function athleticlot()
@@ -39,5 +25,9 @@ class MapController extends Controller
   public function addRow()
   {
     (new MapDatabaseModel())->addRowToDB($_POST['x'],$_POST['y'],$_POST['width'],$_POST['height'],$_POST['spot_num'],$_POST['num_of_spots'],$_POST['spacing']);
+  }
+  public function editRow()
+  {
+    (new MapDatabaseModel())->editRowInDB($_POST['start'],$_POST['finish'],$_POST['x_add'],$_POST['y_add'],$_POST['width_add'],$_POST['height_add']);
   }
 }

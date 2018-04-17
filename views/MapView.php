@@ -44,7 +44,7 @@ class MapView extends StudentsPageView
                   }
                   ?>
 
-                    <div class="map-button" style="top:3.8%;left:37.2%;width:1.6%;height:5.5%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
+                    <div class="map-button" style="top:42.4%;left:14.3%;width:1%;height:2.9%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
                     <div class="map-button" style="top:3.8%;left:39.25%;width:1.6%;height:5.5%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
                   </div>
 
@@ -53,6 +53,7 @@ class MapView extends StudentsPageView
           </div>
         </center>
         <button id="addrowbutton">enter row</button>
+        <button id="editrowbutton">edit row</button>
       </div>
     </div>
     <?php
