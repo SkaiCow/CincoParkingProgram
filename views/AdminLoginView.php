@@ -20,10 +20,12 @@ class AdminLoginView
           <center>
           <h2 style="color: #F0EFEF;">Admin Password<h2>
             <div class="login-input-container">
-              <input class="login-input" type="password" placeholder="*******">
-              <div class="login-enter">
-                <img src="/images/Enter.png" height="50px" width="50px">
-              </div>
+              <form method="post" action="/?p=login&do=loginadmin">
+                <input class="login-input" name="password" type="password" placeholder="*******">
+                <div class="login-enter">
+                  <input type="image" src="/images/Enter.png" border="0" alt="Submit"/>
+                </div>
+              </form>
             </div>
           </center>
         </div>

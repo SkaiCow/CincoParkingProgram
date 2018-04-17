@@ -37,29 +37,34 @@ abstract class AdminPageView implements View
             <span><b>Menu</b></span>
           </center>
         </div>
-        <a href="/Admin/?p=start" class="menu-nav-button-link">
+        <a href="/?p=start" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Home</div>
           </div>
         </a>
-        <a href="/Admin/?p=enterID" class="menu-nav-button-link">
+        <a href="/?p=enterID" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Enter ID</div>
           </div>
         </a>
-        <a href="/Admin/?p=user" class="menu-nav-button-link">
+        <a href="/?p=user" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">View Table</div>
           </div>
         </a>
-        <a href="/Admin/?p=color" class="menu-nav-button-link">
+        <a href="/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Search</div>
           </div>
         </a>
-        <a href="/Admin/?p=color" class="menu-nav-button-link">
+        <a href="/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Parking Map</div>
+          </div>
+        </a>
+        <a href="/?p=login&do=logout" class="menu-nav-button-link">
+          <div class="menu-nav-button-container">
+            <div class="menu-nav-button">Logout</div>
           </div>
         </a>
       </div>

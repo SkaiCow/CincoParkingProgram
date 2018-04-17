@@ -48,12 +48,29 @@ $action = isset($_GET['do']) ? $_GET['do'] : 'display';
 
 switch ($controller)
 {
+	case 'start':
+		(new StartController($action))->executeAction();
+		break;
+	case 'color':
+		(new ColorController($action))->executeAction();
+		break;
+	case 'user':
+		(new UsersController($action))->executeAction();
+		break;
+	case 'enterID':
+		(new EnterIDController($action))->executeAction();
+		break;
 	case 'login':
-		(new LoginController($action))->executeAction(); break;
+		(new LoginController($action))->executeAction(); 
+		break;
+
+	//students pages
 	case 'students':
-		(new StudentsController($action))->executeAction(); break;
+		(new StudentsController($action))->executeAction(); 
+		break;
 	case 'map':
-		(new MapController($action))->executeAction(); break;
+		(new MapController($action))->executeAction(); 
+		break;
 	case 'error':
 		switch($_GET['message'])
 		{
@@ -72,7 +89,15 @@ switch ($controller)
 			case 'nostudentinfo':
 				echo "You must fill out all data-fields for the Student Information form. Go back and fill them out.";
 				break;
-
+			case 'incorrectpassword':
+				echo "The administrator password you used was incorrect. Go back and try again.";
+				break;
+			case 'noidenter':
+				echo "You did not enter an ID into the form. Go back and try again.";
+				break;
+			case 'badid':
+				echo "This ID is invalid or has been used already. Go back and try again.";
+				break;
 		}
 		break;
 }

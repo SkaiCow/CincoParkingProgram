@@ -4,7 +4,20 @@ class MapController extends Controller
 {
   public function display()
   {
-    (new MapHubView())->render();
+    if(Session::isLoggedIn())
+    {
+      if(!Session::isAdmin())
+      {
+        //evaluate a condition to make sure the user hasn't already selected a spot
+        (new MapHubView())->render();
+      }
+      else
+        header("Location: /?p=error&message=adminnostudentpage");
+    }
+    else
+    {
+      header("Location: /?p=login");
+    }
   }
   public function seniorlot()
   {

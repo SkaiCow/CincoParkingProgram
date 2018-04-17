@@ -29,5 +29,12 @@ class StudentsDatabaseModel extends DatabaseModel
 		$query->bindValue(':value', $value);
 		return ($query->execute());
 	}
+
+	public function addStudent($id)
+	{
+		$query = self::$conn->prepare('INSERT INTO students SET student_id=:id');
+		$query->bindValue(':id', $id);
+		return ($query->execute());
+	}
 }
 ?>
