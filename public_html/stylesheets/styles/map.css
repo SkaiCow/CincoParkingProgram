@@ -40,7 +40,7 @@
   filter: alpha(opacity=50);
   cursor: pointer;
 }
-.map-softmore-selecter
+.map-sophomore-selecter
 {
   position: absolute;
   top: 50%;
@@ -48,7 +48,7 @@
   height: 34%;
   width: 24%;
 }
-.map-softmore-selecter :hover
+.map-sophomore-selecter :hover
 {
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -75,7 +75,7 @@
   min-width: 800px;
 }
 
-.map-softmorelot-container
+.map-sophomorelot-container
 {
   position: relative;
   left: -16%;

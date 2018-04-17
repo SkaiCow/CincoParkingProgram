@@ -10,7 +10,7 @@ class MapController extends Controller
   {
     (new MapView())->render();
   }
-  public function softmorelot()
+  public function sophomorelot()
   {
     (new MapView())->render();
   }
@@ -25,11 +25,6 @@ class MapController extends Controller
   }
   public function addRow()
   {
-    $addrow = isset($_POST['addrow'])?$_POST['addrow']:FALSE;
-    if($addrow)
-    {
-      (new MapDatabaseModel())->addRowToDB($_POST['x'],$_POST['y'],$_POST['width'],$_POST['height'],$_POST['spot_num'],$_POST['num_of_spots'],$_POST['spacing']);
-      $_POST['addrow'] = FALSE;
-    }
+    (new MapDatabaseModel())->addRowToDB($_POST['x'],$_POST['y'],$_POST['width'],$_POST['height'],$_POST['spot_num'],$_POST['num_of_spots'],$_POST['spacing']);
   }
 }

@@ -24,14 +24,13 @@ $(document).ready(function() {
   {
     console.log("i am adding a row now!");
     var values = {
-      'addrow' : true,
-      'x' : 38.3,
-      'y' : 3.8,
-      'width' : 2.4,
-      'height' : 5.5,
-      'spot_num' : 1000,
-      'num_of_spots' : 13,
-      'spacing' : 2
+      'x' : 14.3,
+      'y' : 28.3,
+      'width' : 1,
+      'height' : 2.9,
+      'spot_num' : 789,
+      'num_of_spots' : 42,
+      'spacing' : -1.23
     };
     request = $.ajax({
       type: "post",
@@ -39,7 +38,6 @@ $(document).ready(function() {
       data: values
     });
     request.done(function (){
-      //window.location.replace("/?p=map&do=paclot");
-      console.log("ya i just finished")
+      window.location.replace("/?p=map&do=softmorelot");
     });
   }

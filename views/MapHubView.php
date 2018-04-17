@@ -14,7 +14,7 @@ class MapHubView extends StudentsPageView
             <div class="map-pac-selecter" onclick="gotolot('paclot')">
               <img src="/images/Selecter-03.png" width="100%" height="100%">
             </div>
-            <div class="map-softmore-selecter" onclick="gotolot('softmorelot')">
+            <div class="map-sophomore-selecter" onclick="gotolot('sophomorelot')">
               <img src="/images/Selecter-04.png" width="100%" height="100%">
             </div>
             <div class="map-senior-selecter" onclick="gotolot('seniorlot')">
