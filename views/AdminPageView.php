@@ -1,5 +1,5 @@
 <?php
-abstract class PageView implements View
+abstract class AdminPageView implements View
 {
   protected $title = 'CRHS parking program';
 
