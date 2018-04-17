@@ -1,50 +1,59 @@
 <?php
 class EnterIDController extends Controller
 {
-  public function adminDisplay()
-  {
-    (new EnterIDView())->render();
-  }
+	public function display()
+	{
+			(new EnterIDView())->render();
 
-  public function submit()
-  {
-    if($_POST["ID"] != "")
-    {
-      $id = $_POST["ID"];
-      lcfirst($id);
-      trim($id," ");
-      $goodID = TRUE;
-      if(!ctype_alpha($id[0]))
-      {
-        $goodID = FALSE;
-      }
-      for($i = 1; $i < strlen($id); $i++)
-      {
-        $char = $id[$i];
-        if(!is_numeric($char))
-        {
-          $goodID = FALSE;
-        }
-      }
-      if(strlen($id) != 8)
-      {
-        $goodID = FALSE;
-      }
-      if(!(new AdminDatabaseModel())->isUniqueID($id))
-      {
-        $goodID = FALSE;
-      }
-      if($goodID)
-      {
-        (new AdminDatabaseModel())->addAuthorizedID($id);
-        echo"SUCCESS";
-        return;
-      }
-    }
-    else
-    {
-      //blank entry
-    }
-  }
+	}
+
+	public function submit()
+	{
+		if($_POST["id"] != "")
+		{
+			$id = $_POST["id"];
+			lcfirst($id);
+			trim($id," ");
+			$goodID = TRUE;
+			if(!ctype_alpha($id[0]))
+			{
+				$goodID = FALSE;
+			}
+
+			for($i = 1; $i < strlen($id); $i++)
+			{
+				$char = $id[$i];
+				if(!is_numeric($char))
+				{
+					$goodID = FALSE;
+				}
+			}
+
+			if(strlen($id) != 8)
+			{
+				$goodID = FALSE;
+			}
+
+			if((new StudentsDatabaseModel())->getStudent($id)['student_id'] == $id)
+			{
+				$goodID = FALSE;
+			}
+			echo $goodID == FALSE ? "False" : "True";
+			
+			if($goodID)
+			{
+				(new StudentsDatabaseModel())->addStudent($id);
+				header("Location: /?p=enterID&do=display");
+			}
+			else
+			{
+				header("Location: /?p=error&message=badid");
+			}
+		}
+		else
+		{
+			header("Location: /?p=error&message=noidenter");
+		}
+	}
 }
  ?>

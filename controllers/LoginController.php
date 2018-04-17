@@ -10,20 +10,20 @@ class LoginController extends Controller
 		else
 		{
 			if(Session::isAdmin())
-				header("Location: /admin/?p=start"); //wherever the admin page is
+				header("Location: /?p=start"); //wherever the admin page is
 			else
 				header("Location: /?p=students");
 		}
 	}
 
-	public function adminDisplay()
+	public function displayAdmin()
 	{
 		if(!Session::isLoggedIn())
 			(new AdminLoginView())->render();
 		else
 		{
 			if(Session::isAdmin())
-				header("Location: /admin/?p=start"); //wherever the admin page is
+				header("Location: /?p=start"); //wherever the admin page is
 			else
 				header("Location: /?p=students");
 		}
@@ -31,7 +31,7 @@ class LoginController extends Controller
 
 	public function logout()
 	{
-		if(Session::isAdmin())
+		if(!Session::isAdmin())
 		{
 			Session::logout();
 			header("Location: /?p=login");
@@ -39,7 +39,7 @@ class LoginController extends Controller
 		else
 		{
 			Session::logout();
-			header("Location: /admin");
+			header("Location: /?p=login&do=displayAdmin");
 		}
 	}
 
@@ -63,13 +63,14 @@ class LoginController extends Controller
 
 	public function loginAdmin()
 	{
-		if(!isset($_POST['password']))
+		echo $GLOBALS['config']->get('admin');
+		if($_POST['password'] == "")
 			header("Location: /?p=error&message=nopassword");
 
 		if($_POST['password'] == $GLOBALS['config']->get('admin'))
 		{
 			Session::login($_POST['password']);
-			header("Location: /?p="); //whatever the admin page is
+			header("Location: /?p=start"); //whatever the admin page is
 		}
 		else
 		{
