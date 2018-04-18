@@ -4,7 +4,6 @@ class UsersView extends AdminPageView
 {
   protected function renderBody()
   {
-    $users = (new StudentsDatabaseModel())->getAllStudents();
     ?>
     <div class="defaults-page">
       <div class="defaults-container">
@@ -64,22 +63,23 @@ class UsersView extends AdminPageView
             <th>License Number</th>
           </tr>
             <?php
+            $users = (new StudentsDatabaseModel())->getAllStudents();
             foreach ($users as $user) {
             ?>
             <tr class="users-table-row">
               <td class="users-edit"><img src="/images/tool.png" height="20px" width="20px"></img></td>
-              <td><?= $user['first_name']?></th>
-              <td><?= $user['last_name']?></th>
-              <td><?= $user['grade']?></th>
+              <td><?= $user['name_first']?></th>
+              <td><?= $user['name_last']?></th>
+              <td>hey we need this</th>
               <td><?= $user['student_id']?></th>
-              <td><?= $user['spot_name']?></th>
-              <td><?= $user['spot_num']?></th>
-              <td><?= $user['sticker_num']?></th>
-              <td><?= $user['color']?></th>
-              <td><?= $user['make']?></th>
-              <td><?= $user['model']?></th>
-              <td><?= $user['year']?></th>
-              <td><?= $user['license_num']?></th>
+              <td><?= $user['name_spot']?></th>
+              <td>624</th>
+              <td><?= $user['sticker_number']?></th>
+              <td><?= $user['car_color']?></th>
+              <td><?= $user['car_make']?></th>
+              <td><?= $user['car_model']?></th>
+              <td><?= $user['car_year']?></th>
+              <td><?= $user['car_license']?></th>
             </tr>
             <?php
             }

@@ -14,7 +14,7 @@ class EnterIDView extends AdminPageView
 						<input type="submit" value="Submit">
 					</form><br>
 				</div>
-				<div class="enterId-container" style="padding-bottom:20px;">
+				<div class="enterId-view-container" style="padding-bottom:20px;">
 					<h4>Students in list</h4><br>
 					<table class="enterID-entry-table">
 						<?php foreach ($students as $student) { ?>
