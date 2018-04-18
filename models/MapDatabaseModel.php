@@ -32,7 +32,7 @@ class MapDatabaseModel extends DatabaseModel
       'VALUES (?,"sophomorelot",?,?,?,?,0,0,null);');
     for($i = $spot_num;$i<$spot_num+$num_of_spots;$i++)
     {
-      $data = array($i, $width, $height, $x+($spot_num-$i)*$spacing,$y);
+      $data = array($i, $width, $height, $x-($spot_num-$i)*$spacing,$y);
       $query->execute($data);
     }
   }

@@ -35,6 +35,12 @@ class MapView extends StudentsPageView
                       </div>
                       <?php
                     }
+                    else if($spot['statues'] == 1)
+                    {
+                      ?>
+                        <img src="/images/cars/requesting.png" class="map-car"  style="top:<?= $spot['pos_y']?>%;left:<?= $spot['pos_x']?>%;width:<?= $spot['width']+.4?>%;height:<?= $spot['height']+.5?>%;">
+                      <?php
+                    }
                     else
                     {
                       ?>
@@ -44,8 +50,8 @@ class MapView extends StudentsPageView
                   }
                   ?>
 
-                    <div class="map-button" style="top:42.4%;left:14.3%;width:1%;height:2.9%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
-                    <div class="map-button" style="top:3.8%;left:39.25%;width:1.6%;height:5.5%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
+                    <div class="map-button" style="top:42.4%;left:20.3%;width:1.4%;height:3%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
+                    <div class="map-button" style="top:3.8%;left:39.25%;width:1.4%;height:3%;" id="1623"><div class="map-popup"><div>1623</div></div></div>
                   </div>
 
               </div>

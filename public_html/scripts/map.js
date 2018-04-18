@@ -25,12 +25,12 @@ $(document).ready(function() {
   {
     console.log("i am adding a row now!");
     var values = {
-      'x' : 14.3,
-      'y' : 42.67,
+      'x' : 77,
+      'y' : 61,
       'width' : 1,
       'height' : 2.9,
-      'spot_num' : 885,
-      'num_of_spots' : 54,
+      'spot_num' : 1045,
+      'num_of_spots' : 52,
       'spacing' : -1.23
     };
     request = $.ajax({
@@ -47,12 +47,13 @@ $(document).ready(function() {
   {
     console.log("i am editing rows now!");
     var values = {
-      'start' : 790,
-      'finish' : 833,
+      'start' : 1045,
+      'finish' : 1096,
       'x_add' : 0,
-      'y_add' : .5,
-      'width_add' : 0,
-      'height_add' : 0
+      'y_add' : 0,
+      'width_add' : -.4,
+      'height_add' : -.1,
+      'spacing' : 1.7
     };
     request = $.ajax({
       type: "post",
