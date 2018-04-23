@@ -182,6 +182,7 @@
   background-image: url("/images/popup.png");
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 100;
 }
 .map-popup > div
 {

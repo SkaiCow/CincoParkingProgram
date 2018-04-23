@@ -24,12 +24,26 @@ class StudentsController extends Controller
 
 	public function done()
 	{
-		(new DoneView())->render();
+		if(Session::isLoggedIn())
+		{
+			if(!Session::isAdmin())
+			{
+				//check for if you need to wait
+				(new DoneView())->render();
+			}
+		}
 	}
 
 	public function wait()
 	{
-		(new WaitView())->render();
+		if(Session::isLoggedIn())
+		{
+			if(!Session::isAdmin())
+			{
+				//more function here to request spot
+				(new WaitView())->render();
+			}
+		}
 	}
 
 	public function enterInfo()
@@ -45,7 +59,7 @@ class StudentsController extends Controller
 				header("Location: /?p=error&message=nostudentinfo");
 			}
 		}
-		
+
 		foreach($info as $key => $value)
 		{
 			(new StudentsDatabaseModel())->editStudent(Session::getId(), $key, $value);

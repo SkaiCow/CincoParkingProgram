@@ -42,5 +42,14 @@ class MapDatabaseModel extends DatabaseModel
     $data = array($x_add, $y_add, $width_add, $height_add, $start, $finish);
     $query->execute($data);
   }
+
+  public function requestSpot($spot, $ID, $color)
+  {
+    $query = self::$conn->prepare('UPDATE spot_data SET statues = 1, taken_id = :id, color = :color WHERE spot_number = :spot');
+    $query->bindvalue(':id', $ID, PDO::PARAM_INT);
+    $query->bindvalue(':color', $color, PDO::PARAM_STR);
+    $query->bindvalue(':spot', $spot, PDO::PARAM_INT);
+    $query->execute($data);
+  }
 }
  ?>
