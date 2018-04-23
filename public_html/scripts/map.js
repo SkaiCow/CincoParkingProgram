@@ -25,13 +25,13 @@ $(document).ready(function() {
   {
     console.log("i am adding a row now!");
     var values = {
-      'x' : 77,
-      'y' : 61,
-      'width' : 1,
-      'height' : 2.9,
-      'spot_num' : 1045,
-      'num_of_spots' : 52,
-      'spacing' : -1.23
+      'x' : 47.31,
+      'y' : 77.3,
+      'width' : 1.7,
+      'height' : 5.8,
+      'spot_num' : 1289,
+      'num_of_spots' : 8,
+      'spacing' : 2.03
     };
     request = $.ajax({
       type: "post",
@@ -39,7 +39,7 @@ $(document).ready(function() {
       data: values
     });
     request.done(function (){
-      window.location.replace("/?p=map&do=sophomorelot");
+      window.location.replace("/?p=map&do=paclot");
     });
   }
 
@@ -47,13 +47,13 @@ $(document).ready(function() {
   {
     console.log("i am editing rows now!");
     var values = {
-      'start' : 1045,
-      'finish' : 1096,
+      'start' : 1192,
+      'finish' : 1204,
       'x_add' : 0,
-      'y_add' : 0,
-      'width_add' : -.4,
-      'height_add' : -.1,
-      'spacing' : 1.7
+      'y_add' : 6.8,
+      'width_add' : 0,
+      'height_add' : 0,
+      'spacing' : 0
     };
     request = $.ajax({
       type: "post",
@@ -61,6 +61,6 @@ $(document).ready(function() {
       data: values
     });
     request.done(function (){
-      window.location.replace("/?p=map&do=sophomorelot");
+      window.location.replace("/?p=map&do=athleticlot");
     });
   }
