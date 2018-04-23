@@ -5,11 +5,20 @@ $(document).ready(function() {
     $(this).children().css("display","block");
   },function(){
     $(this).children().css("display","none");
-  })
+  });
 
-  $("#addrowbutton").click(function(){addRow();});
-  $("#editrowbutton").click(function(){editRow();});
-
+  $(".map-button").click(function(){
+    console.log("i am going to take spot: "+$(this).attr('id'));
+    var values = {'spot_num' : $(this).attr('id')};
+    request = $.ajax({
+      type: "post",
+      url: "/?p=map&do=requestSpot",
+      data: values
+    });
+    request.done(function(){
+      //window.location.replace("/?p=students&do=done");
+    });
+  });
 });
 
   function gotolot(lot)
@@ -21,6 +30,7 @@ $(document).ready(function() {
     location.replace("/?p=map");
   }
 //just a function to add rows in the database, alter it to what ever you want
+//why are they down here and not up in the jquery stuff? no reason, add it if you realy want to use  these commands in admin
   function addRow()
   {
     console.log("i am adding a row now!");

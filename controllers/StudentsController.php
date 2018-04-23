@@ -40,8 +40,15 @@ class StudentsController extends Controller
 		{
 			if(!Session::isAdmin())
 			{
-				//more function here to request spot
-				(new WaitView())->render();
+				$student = (new StudentsDatabaseModel())->getStudent(Session::getid());
+				if($student['approved'] == 1)
+				{
+					(new WaitView())->render();
+				}
+				else
+				{
+					header("location: /?p=students");
+				}
 			}
 		}
 	}

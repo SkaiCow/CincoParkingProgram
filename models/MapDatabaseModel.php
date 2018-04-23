@@ -45,11 +45,13 @@ class MapDatabaseModel extends DatabaseModel
 
   public function requestSpot($spot, $ID, $color)
   {
-    $query = self::$conn->prepare('UPDATE spot_data SET statues = 1, taken_id = :id, color = :color WHERE spot_number = :spot');
-    $query->bindvalue(':id', $ID, PDO::PARAM_INT);
-    $query->bindvalue(':color', $color, PDO::PARAM_STR);
-    $query->bindvalue(':spot', $spot, PDO::PARAM_INT);
+    $query = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = "1", taken_id = ?, color = ? '.
+      'WHERE spot_number = ?');
+    $data = array($ID,$color,$spot);
     $query->execute($data);
+    //we might want to go back to these querys and make responses in case they don't pass.
   }
 }
  ?>

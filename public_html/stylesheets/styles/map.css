@@ -164,6 +164,7 @@
   left: 50.6%;
   width: 1.2%;
   height: 3.4%;
+  z-index: 10;
 }
 
 .map-button:hover

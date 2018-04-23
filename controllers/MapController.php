@@ -108,13 +108,17 @@ class MapController extends Controller
 	  }
   }
 
-  public function requestSpot($spot_num, $ID, $color)
+  public function requestSpot()
   {
-    $spot = (new MapDatabaseModel())->getSpotByNumber($spot_num);
+    echo '<script>';
+    echo 'console.log("ya i am running ok!")';
+    echo '</script>';
+    $spot = (new MapDatabaseModel())->getSpotByNumber($_POST['spot_num']);
     if($spot['statues'] == 0)
     {
-      (new MapDatabaseModel())->requestSpot($spot_num, $ID, $color);
-      header("location: /?p=wait");
+      $student = (new StudentsDatabaseMobel())->getStudent(Session::getid());
+      (new MapDatabaseModel())->requestSpot($spot['spot_number'], Session::getid(), $student['car_color']);
+      (new StudentsDatabaseMobel())->editStudent(Session::getid(),'approved','1');
     }
     else
     {
