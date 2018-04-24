@@ -12,6 +12,7 @@ abstract class AdminPageView implements View
         <link rel="stylesheet" type="text/css" href="/SuperCSSLoader.php">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="/scripts/navMenu.js"></script>
+        <script type="text/javascript" src="/scripts/approve.js"></script>
       </head>
   <?php }
 
@@ -52,6 +53,12 @@ abstract class AdminPageView implements View
             <div class="menu-nav-button">View Table</div>
           </div>
         </a>
+        <a href="/?p=approve" class="menu-nav-button-link">
+          <div class="menu-nav-button-container">
+            <div class="menu-nav-button">Approval</div>
+          </div>
+        </a>
+        <!--
         <a href="/?p=color" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Search</div>
@@ -62,6 +69,7 @@ abstract class AdminPageView implements View
             <div class="menu-nav-button">Parking Map</div>
           </div>
         </a>
+        -->
         <a href="/?p=login&do=logout" class="menu-nav-button-link">
           <div class="menu-nav-button-container">
             <div class="menu-nav-button">Logout</div>

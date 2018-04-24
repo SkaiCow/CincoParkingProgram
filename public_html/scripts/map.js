@@ -8,19 +8,23 @@ $(document).ready(function() {
   });
 
   $(".map-button").click(function(){
-    console.log("i am going to take spot: "+$(this).attr('id'));
-    var values = {'spot_num' : $(this).attr('id')};
-    request = $.ajax({
-      type: "post",
-      url: "/?p=map&do=requestSpot",
-      data: values
-    });
-    request.done(function(){
-      //window.location.replace("/?p=students&do=done");
-    });
+    helpme($(this).attr('id'));
   });
 });
 
+  function helpme(spot_num)
+  {
+    console.log("i am going to take spot: "+spot_num);
+    var values = {'spot_num' : 986};
+    request = $.ajax({
+      type: "post",
+      url: "/?p=map&do=requestspot",
+      data: values
+    });
+    request.done(function(){
+      window.location.replace("/?p=students&do=done");
+    });
+  }
   function gotolot(lot)
   {
     location.replace("/?p=map&do="+lot);

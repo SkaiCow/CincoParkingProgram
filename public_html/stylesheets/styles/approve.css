@@ -1,0 +1,45 @@
+.approve-table
+{
+  width: 95%;
+  border-collapse: collapse;
+  margin: 0px auto;
+}
+
+.approve-table-heading > th
+{
+border-bottom: 1px solid grey;
+}
+
+.approve-table-body > td
+{
+  height: 40px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  padding: 5px 10px;
+}
+
+.approve-table-body
+{
+  background-color: #efefef;
+}
+
+.approve-table-body:nth-child(even)
+{
+  background-color: #dddddd;
+}
+
+.approve-yes
+{
+  background-color: #7cce71;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.approve-no
+{
+  background-color: #ce7171;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}

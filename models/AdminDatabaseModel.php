@@ -60,9 +60,17 @@ class AdminDatabaseModel extends DatabaseModel
 
       return $result;
     }
-
-
   }
 
+  public function approve($id)
+  {
+    $query = self::$conn->prepare(
+      'UPDATE students '.
+      'SET approved = 2 '.
+      'WHERE student_id = :id'
+    );
+    $query->bindvalue(':id', $id, PDO::PARAM_INT);
+    $query->execute();
+  }
 }
 ?>

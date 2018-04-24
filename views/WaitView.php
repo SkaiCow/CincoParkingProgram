@@ -9,7 +9,7 @@ class WaitView extends StudentsPageView
     <div class="defaults-page">
       <div class="defaults-container">
         <div class="done-wait-container">
-            <h3><img src="/images/loading_icon.gif" height="50px" width="auto">Please Wait...</h3>
+            <h3><img src="/images/loading_icon.gif" height="50px" width="auto"> Please Wait...</h3>
             <br>
             Your information is in review and waiting for approval.<br>
             Wait here until your spot has been approved and you see the <i>finished</i> screen.

@@ -28,8 +28,21 @@ class StudentsController extends Controller
 		{
 			if(!Session::isAdmin())
 			{
-				//check for if you need to wait
+				//check for if you need to wait and if you need to go back
 				(new DoneView())->render();
+			}
+		}
+	}
+
+	public function askforapproval()
+	{
+		if(Session::isLoggedIn())
+		{
+			if(!Session::isAdmin())
+			{
+				//check if the student has a spot and his info
+				(new StudentsDatabaseModel())->askForApproval(Session::getid());
+				header("location: /?p=students&do=wait");
 			}
 		}
 	}

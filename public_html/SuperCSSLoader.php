@@ -21,7 +21,8 @@ $mainFiles = [
   'enterID.css',
   'info.css',
   'map.css',
-  'done.css'
+  'done.css',
+  'approve.css'
 ];
 
 foreach($mainFiles as $file) {

@@ -11,7 +11,10 @@ class MapController extends Controller
         if(Session::getStudent()['name_first'] == "none-entered")
           header("location: /?p=students");
         else
-          (new MapHubView())->render();
+          if((new MapDatabaseModel())->hasSpot(Session::getid()))
+            header("Location: /?p=students&do=done");
+          else
+            (new MapHubView())->render();
       }
       else
       {
@@ -108,17 +111,13 @@ class MapController extends Controller
 	  }
   }
 
-  public function requestSpot()
+  public function requestspot()
   {
-    echo '<script>';
-    echo 'console.log("ya i am running ok!")';
-    echo '</script>';
     $spot = (new MapDatabaseModel())->getSpotByNumber($_POST['spot_num']);
     if($spot['statues'] == 0)
     {
-      $student = (new StudentsDatabaseMobel())->getStudent(Session::getid());
+      $student = (new StudentsDatabaseModel())->getStudent(Session::getid());
       (new MapDatabaseModel())->requestSpot($spot['spot_number'], Session::getid(), $student['car_color']);
-      (new StudentsDatabaseMobel())->editStudent(Session::getid(),'approved','1');
     }
     else
     {

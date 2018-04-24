@@ -36,5 +36,15 @@ class StudentsDatabaseModel extends DatabaseModel
 		$query->bindValue(':id', $id);
 		return ($query->execute());
 	}
+
+	public function askForApproval($ID)
+  {
+    $query = self::$conn->prepare(
+      'UPDATE students '.
+      'SET approved = "1" '.
+      'WHERE student_id = ?');
+    $data = array($ID);
+    $query->execute($data);
+  }
 }
 ?>

@@ -25,6 +25,18 @@ class MapDatabaseModel extends DatabaseModel
     return $result;
   }
 
+  public function getSpotByID($num)
+  {
+    $query = self::$conn->prepare(
+      'SELECT * ' .
+      'FROM spot_data '.
+      'WHERE taken_id = :num');
+    $query->bindvalue(':num', $num, PDO::PARAM_INT);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    return $result;
+  }
+
   public function addRowToDB($x,$y,$width,$height,$spot_num,$num_of_spots,$spacing)
   {
     $query = self::$conn->prepare(
@@ -52,6 +64,26 @@ class MapDatabaseModel extends DatabaseModel
     $data = array($ID,$color,$spot);
     $query->execute($data);
     //we might want to go back to these querys and make responses in case they don't pass.
+  }
+
+  public function hasSpot($ID)
+  {
+    $query = self::$conn->prepare(
+      'SELECT * ' .
+      'FROM spot_data '.
+      'WHERE taken_id = :id');
+    $query->bindvalue(':id', $ID, PDO::PARAM_INT);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $result = array_filter($result);
+    if(empty($result))
+    {
+      return false;
+    }
+    else
+    {
+      return true;
+    }
   }
 }
  ?>

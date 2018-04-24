@@ -61,15 +61,18 @@ switch ($controller)
 		(new EnterIDController($action))->executeAction();
 		break;
 	case 'login':
-		(new LoginController($action))->executeAction(); 
+		(new LoginController($action))->executeAction();
+		break;
+	case 'approve':
+		(new ApproveController($action))->executeAction();
 		break;
 
 	//students pages
 	case 'students':
-		(new StudentsController($action))->executeAction(); 
+		(new StudentsController($action))->executeAction();
 		break;
 	case 'map':
-		(new MapController($action))->executeAction(); 
+		(new MapController($action))->executeAction();
 		break;
 	case 'error':
 		switch($_GET['message'])
