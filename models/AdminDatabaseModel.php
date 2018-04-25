@@ -69,7 +69,7 @@ class AdminDatabaseModel extends DatabaseModel
       'SET approved = 2 '.
       'WHERE student_id = :id'
     );
-    $query->bindvalue(':id', $id, PDO::PARAM_INT);
+    $query->bindvalue(':id', $id, PDO::PARAM_STR);
     $query->execute();
   }
 }
