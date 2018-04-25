@@ -19,7 +19,19 @@ class MapDatabaseModel extends DatabaseModel
       'SELECT * ' .
       'FROM spot_data '.
       'WHERE spot_number = :num');
-    $query->bindvalue(':num', $num, PDO::PARAM_INT);
+    $query->bindvalue(':num', $num);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    return $result;
+  }
+
+  public function getSpotByStudent($ID)
+  {
+    $query = self::$conn->prepare(
+      'SELECT * ' .
+      'FROM spot_data '.
+      'WHERE taken_id=:num');
+    $query->bindvalue(':num', $ID);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
     return $result;
@@ -71,19 +83,14 @@ class MapDatabaseModel extends DatabaseModel
     $query = self::$conn->prepare(
       'SELECT * ' .
       'FROM spot_data '.
-      'WHERE taken_id = :id');
-    $query->bindvalue(':id', $ID, PDO::PARAM_INT);
+      'WHERE spot_data.taken_id=:id LIMIT 1');
+    $query->bindvalue(':id', $ID);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
-    $result = array_filter($result);
-    if(empty($result))
-    {
+    
+    if(!$result)
       return false;
-    }
-    else
-    {
-      return true;
-    }
+    return true;
   }
 }
  ?>

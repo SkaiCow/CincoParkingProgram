@@ -15,7 +15,7 @@ class UsersView extends AdminPageView
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Grade</th>
-                <th>Stutent ID</th>
+                <th>Student ID</th>
                 <th>Spot Name</th>
                 <th>Spot Number</th>
                 <th>Sticker Number</th>
@@ -52,7 +52,7 @@ class UsersView extends AdminPageView
             <th>First Name</th>
             <th>Last Name</th>
             <th>Grade</th>
-            <th>Stutent ID</th>
+            <th>Student ID</th>
             <th>Spot Name</th>
             <th>Spot Number</th>
             <th>Sticker Number</th>
@@ -70,10 +70,10 @@ class UsersView extends AdminPageView
               <td class="users-edit"><img src="/images/tool.png" height="20px" width="20px"></img></td>
               <td><?= $user['name_first']?></th>
               <td><?= $user['name_last']?></th>
-              <td>hey we need this</th>
+              <td><?= $user['grade']?></th>
               <td><?= $user['student_id']?></th>
               <td><?= $user['name_spot']?></th>
-              <td>624</th>
+              <td><?= (new MapDatabaseModel())->getSpotByStudent($user['student_id'])['spot_number'] ?></th>
               <td><?= $user['sticker_number']?></th>
               <td><?= $user['car_color']?></th>
               <td><?= $user['car_make']?></th>

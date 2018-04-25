@@ -15,7 +15,7 @@ $(document).ready(function() {
   function helpme(spot_num)
   {
     console.log("i am going to take spot: "+spot_num);
-    var values = {'spot_num' : 986};
+    var values = {'spot_num' : spot_num};
     request = $.ajax({
       type: "post",
       url: "/?p=map&do=requestspot",

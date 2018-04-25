@@ -4,12 +4,18 @@ class ApproveController extends Controller
 {
   public function display()
   {
-    (new ApproveView())->render();
+  	if(Session::isAdmin())
+    	(new ApproveView())->render();
+    else
+    	header("Location: /?p=login");
   }
 
   public function approve()
   {
-    (new AdminDatabaseModel())->approve($_POST['student_id']);
+  	if(Session::isAdmin())
+    	(new AdminDatabaseModel())->approve($_POST['student_id']);
+    else
+    	header("Location: /?p=login");
   }
 
 }

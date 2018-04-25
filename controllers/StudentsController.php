@@ -28,9 +28,24 @@ class StudentsController extends Controller
 		{
 			if(!Session::isAdmin())
 			{
-				//check for if you need to wait and if you need to go back
-				(new DoneView())->render();
+				if(Session::getStudent()['name_first'] == "none-entered")
+					header("Location: /?p=students");
+				else
+					if((new MapDatabaseModel())->hasSpot(Session::getId()))
+						{
+						(new DoneView())->render();
+						}
+					else
+						header("Location: /?p=map");
 			}
+			else
+			{
+				header("Location: /?p=error&message=adminnostudentpage");
+			}
+		}
+		else
+		{
+			header("Location: /?p=login");
 		}
 	}
 
@@ -41,8 +56,8 @@ class StudentsController extends Controller
 			if(!Session::isAdmin())
 			{
 				//check if the student has a spot and his info
-				(new StudentsDatabaseModel())->askForApproval(Session::getid());
-				header("location: /?p=students&do=wait");
+				(new StudentsDatabaseModel())->askForApproval(Session::getId());
+				header("Location: /?p=students&do=wait");
 			}
 		}
 	}
@@ -53,14 +68,21 @@ class StudentsController extends Controller
 		{
 			if(!Session::isAdmin())
 			{
-				$student = (new StudentsDatabaseModel())->getStudent(Session::getid());
+				$student = (new StudentsDatabaseModel())->getStudent(Session::getId());
 				if($student['approved'] == 1)
 				{
 					(new WaitView())->render();
 				}
+				else if($student['approved'] == 2)
+				{
+					Session::logout();
+					?>
+						Your reservation has been confirmed! New Form: <a href="/?p=login">Start</a>
+					<?php
+				}
 				else
 				{
-					header("location: /?p=students");
+					header("Location: /?p=students");
 				}
 			}
 		}

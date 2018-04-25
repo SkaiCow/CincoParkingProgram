@@ -16,6 +16,15 @@ class EnterInfoView extends StudentsPageView
 							<li><p>First name: <input name="name_first" placeholder="William"></p></li>
 							<li><p>Last name: <input name="name_last" placeholder="Lasater"></p></li>
 							<li><p>Student ID: <input value=<?= Session::$id ?> readonly></p></li>
+							<li><p>Grade:
+								<select name="grade">
+									<option selected value="">None Selected</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>
+							</p></li>
 						</ul>
 						<h4>Spot Info</h4>
 						<ul>

@@ -3,8 +3,10 @@ class EnterIDController extends Controller
 {
 	public function display()
 	{
+		if(Session::isAdmin())
 			(new EnterIDView())->render();
-
+		else
+    		header("Location: /?p=login");
 	}
 
 	public function submit()

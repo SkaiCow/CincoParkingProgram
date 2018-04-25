@@ -101,6 +101,9 @@ switch ($controller)
 			case 'badid':
 				echo "This ID is invalid or has been used already. Go back and try again.";
 				break;
+			case 'spotalreadychosen':
+				echo "This spot has already been chosen. Go back and pick another one!";
+				break;
 		}
 		break;
 }
