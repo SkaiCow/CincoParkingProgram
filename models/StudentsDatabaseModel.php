@@ -11,6 +11,25 @@ class StudentsDatabaseModel extends DatabaseModel
 		return $result;
 	}
 
+	public function getStudentsInProgress()
+	{
+		$query = self::$conn->prepare(
+				'SELECT * ' .
+				'FROM students '.
+				'WHERE approved = 0 OR approved = 1');
+		$query->execute();
+		$result = $query->fetchAll(PDO::FETCH_ASSOC);
+    $result = array_filter($result);
+		if(empty($result))
+		{
+			return 'none';
+		}
+		else
+		{
+			return $result;
+		}
+	}
+
 	public function getStudent($id)
 	{
 		$query = self::$conn->prepare(
