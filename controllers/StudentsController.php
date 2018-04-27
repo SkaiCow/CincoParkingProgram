@@ -89,6 +89,18 @@ class StudentsController extends Controller
 		}
 	}
 
+	public function resetinfo()
+	{
+		if(Session::isLoggedIn())
+		{
+			if(!Session::isAdmin())
+			{
+				(new StudentsDatabaseModel())->resetInfo();
+				header("Location: /?p=students");
+			}
+		}
+	}
+
 	public function enterInfo()
 	{
 		$info = array();

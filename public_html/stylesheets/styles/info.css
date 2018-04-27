@@ -15,6 +15,7 @@
   border-radius: 5px;
   border: 2px solid #800000;
   cursor: pointer;
+  display: inline-block;
 }
 
 .info-button:hover
@@ -27,4 +28,29 @@
   font-size: 25px;
   height: 100%;
   color: white;
+}
+
+.info-button-edit
+{
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(#e0e0e0, #bcbcbc);
+  color: black;
+  margin: 20px 0px;
+  border-radius: 5px;
+  border: 2px solid #7c7c7c;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.info-button-edit:hover
+{
+  background: linear-gradient(#bcbcbc, #e0e0e0);
+}
+
+.info-edit
+{
+  font-size: 25px;
+  height: 100%;
+  color: #7c7c7c;
 }

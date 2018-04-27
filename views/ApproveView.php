@@ -58,6 +58,11 @@ class ApproveView extends AdminPageView
         </div>
       </div>
     </div>
+    <script>
+      setTimeout(function() {
+        window.location.reload();
+      }, 10000);
+    </script>
     <?php
   }
 }

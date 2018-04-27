@@ -36,8 +36,9 @@ class DoneView extends StudentsPageView
                 <li><p>Year: <b><?= $student['car_year']?></b></p></li>
                 <li><p>License Plate Number: <b><?= $student['car_license']?></b></p></li>
             </ul>
-            <div class="help">
+            <div>
               <div class="info-button" id="confirm" onclick="askForApproval()"><center><h4 class="info-enter">Confirm</h4></center></div>
+              <div class="info-button-edit" id="edit" onclick="resetInfo()"><center><h4 class="info-edit">Edit</h4></center></div>
             </div>
           </div>
         </div>

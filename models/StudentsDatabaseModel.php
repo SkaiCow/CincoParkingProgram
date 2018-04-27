@@ -65,5 +65,15 @@ class StudentsDatabaseModel extends DatabaseModel
     $data = array($ID);
     $query->execute($data);
   }
+
+	public function resetInfo()
+	{
+		$query = self::$conn->prepare(
+				'UPDATE students '.
+				'SET name_first = DEFAULT, name_last = DEFAULT, name_spot = DEFAULT, sticker_number = DEFAULT, car_color = DEFAULT, car_make = DEFAULT, car_model = DEFAULT, car_year = DEFAULT, car_license = DEFAULT, grade = DEFAULT '.
+				'WHERE student_id = :id');
+		$query->bindValue(":id", Session::getid());
+		$query->execute();
+	}
 }
 ?>
