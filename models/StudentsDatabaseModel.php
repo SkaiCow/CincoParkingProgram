@@ -75,5 +75,20 @@ class StudentsDatabaseModel extends DatabaseModel
 		$query->bindValue(":id", Session::getid());
 		$query->execute();
 	}
+
+	public function sessionIsdone()
+	{
+		$query = self::$conn->prepare(
+				'SELECT * '.
+				'FROM students '.
+				'WHERE student_id = :id');
+		$query->bindValue(":id", Session::getid());
+		$query->execute();
+		$result = $query->fetch(PDO::FETCH_ASSOC);
+		if($result['approved'] == 2)
+			return 'TRUE';
+		else
+			return 'FALSE';
+	}
 }
 ?>

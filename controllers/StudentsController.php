@@ -70,16 +70,9 @@ class StudentsController extends Controller
 			if(!Session::isAdmin())
 			{
 				$student = (new StudentsDatabaseModel())->getStudent(Session::getId());
-				if($student['approved'] == 1)
+				if($student['approved'] >= 1)
 				{
 					(new WaitView())->render();
-				}
-				else if($student['approved'] == 2)
-				{
-					Session::logout();
-					?>
-						Your reservation has been confirmed! New Form: <a href="/?p=login">Start</a>
-					<?php
 				}
 				else
 				{
