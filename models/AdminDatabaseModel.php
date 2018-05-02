@@ -71,6 +71,13 @@ class AdminDatabaseModel extends DatabaseModel
     );
     $query->bindvalue(':id', $id, PDO::PARAM_STR);
     $query->execute();
+    $query2 = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = 2 '.
+      'WHERE taken_id = :id'
+    );
+    $query2->bindvalue(':id', $id, PDO::PARAM_STR);
+    $query2->execute();
   }
 
   public function deny($id)

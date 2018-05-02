@@ -21,7 +21,7 @@ class WaitView extends StudentsPageView
         <script>
           setTimeout(function() {
             window.location.reload();
-          }, 10000);
+          }, 5000);
         </script>
         <?php
         }
