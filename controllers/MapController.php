@@ -140,4 +140,11 @@ class MapController extends Controller
 			(new MapDatabaseModel())->editRowInDB($_POST['start'],$_POST['finish'],$_POST['x_add'],$_POST['y_add'],$_POST['width_add'],$_POST['height_add']);
 		}
 	}
+
+	public function takespots()
+  {
+    $colors = array("white","red","blue","pink","orange","silver","green","violet","black","indigo","tan","yellow");
+    for($i = $_POST['start']; $i <= $_POST['finish']; $i++)
+      (new AdminDatabaseModel())->takeSpot($i,$colors[rand(0,11)]);
+  }
 }

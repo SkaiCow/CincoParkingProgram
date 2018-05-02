@@ -6,7 +6,7 @@ class DoneView extends StudentsPageView
   protected function renderBody()
   {
   $student = (new StudentsDatabaseModel())->getStudent(Session::getid());
-  $spot = (new MapDatabaseModel())->getSpotByID(Session::getid())
+  $spot = (new MapDatabaseModel())->getSpotByStudent(Session::getid());
 ?>
     <div class="defaults-page">
       <div class="defaults-container">
@@ -14,7 +14,10 @@ class DoneView extends StudentsPageView
           <h3>Confirm Your Info</h3>
           <div class="Info-container">
             <h3>Your spot Number:</h3>
-            <h2><?= $spot['spot_number']?></h2>
+            <h2>
+              <?= $spot['spot_number']?>
+              <div class="info-button-edit" id="edit" onclick="changeSpot()"><center><h4 class="info-edit">Edit</h4></center></div>
+            </h2>
             <h4>Student Info</h4>
             <ul>
               <li><p>First name: <b><?= $student['name_first']?></b></p></li>

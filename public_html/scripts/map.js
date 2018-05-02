@@ -78,3 +78,20 @@ $(document).ready(function() {
       window.location.replace("/?p=map&do=athleticlot");
     });
   }
+
+  function takeSpot()
+  {
+    console.log("i am editing rows now!");
+    var values = {
+      'start' : 16,
+      'finish' : 17
+    };
+    request = $.ajax({
+      type: "post",
+      url: "/?p=map&do=takespots",
+      data: values
+    });
+    request.done(function (){
+      window.location.replace("/?p=map");
+    });
+  }

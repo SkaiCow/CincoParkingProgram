@@ -76,6 +76,16 @@ class StudentsDatabaseModel extends DatabaseModel
 		$query->execute();
 	}
 
+	public function changeSpot()
+	{
+		$query = self::$conn->prepare(
+				'UPDATE spot_data '.
+				'SET statues = 0, taken_id = DEFAULT, color = DEFAULT '.
+				'WHERE taken_id = :id');
+		$query->bindValue(":id", Session::getid());
+		$query->execute();
+	}
+
 	public function sessionIsdone()
 	{
 		$query = self::$conn->prepare(

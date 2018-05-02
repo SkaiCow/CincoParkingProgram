@@ -40,7 +40,7 @@ class ApproveView extends AdminPageView
                         Yes
                       </center>
                     </div>
-                    <div class="approve-no">
+                    <div class="approve-no" id="<?= $student['student_id']?>">
                       <center>
                         No
                       </center>
@@ -61,7 +61,7 @@ class ApproveView extends AdminPageView
     <script>
       setTimeout(function() {
         window.location.reload();
-      }, 10000);
+      }, 5000);
     </script>
     <?php
   }

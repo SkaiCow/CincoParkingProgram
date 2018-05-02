@@ -72,5 +72,28 @@ class AdminDatabaseModel extends DatabaseModel
     $query->bindvalue(':id', $id, PDO::PARAM_STR);
     $query->execute();
   }
+
+  public function deny($id)
+  {
+    $query = self::$conn->prepare(
+      'UPDATE students '.
+      'SET name_first = DEFAULT, name_last = DEFAULT, name_spot = DEFAULT, sticker_number = DEFAULT, car_color = DEFAULT, car_make = DEFAULT, car_model = DEFAULT, car_year = DEFAULT, car_license = DEFAULT, grade = DEFAULT, approved = 0 '.
+      'WHERE student_id = :id'
+    );
+    $query->bindvalue(':id', $id, PDO::PARAM_STR);
+    $query->execute();
+  }
+
+  public function takeSpot($num, $color)
+  {
+    $query = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = 2, color = :color '.
+      'WHERE spot_number = :num'
+    );
+    $query->bindvalue(':num', $num, PDO::PARAM_INT);
+    $query->bindvalue(':color', $color);
+    $query->execute();
+  }
 }
 ?>

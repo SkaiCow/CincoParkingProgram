@@ -17,5 +17,12 @@ class ApproveController extends Controller
     else
     	header("Location: /?p=login");
   }
+  public function deny()
+  {
+  	if(Session::isAdmin())
+    	(new AdminDatabaseModel())->deny($_POST['student_id']);
+    else
+    	header("Location: /?p=login");
+  }
 
 }

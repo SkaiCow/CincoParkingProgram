@@ -30,20 +30,8 @@ class MapDatabaseModel extends DatabaseModel
     $query = self::$conn->prepare(
       'SELECT * ' .
       'FROM spot_data '.
-      'WHERE taken_id=:num');
-    $query->bindvalue(':num', $ID);
-    $query->execute();
-    $result = $query->fetch(PDO::FETCH_ASSOC);
-    return $result;
-  }
-
-  public function getSpotByID($num)
-  {
-    $query = self::$conn->prepare(
-      'SELECT * ' .
-      'FROM spot_data '.
       'WHERE taken_id = :num');
-    $query->bindvalue(':num', $num, PDO::PARAM_INT);
+    $query->bindvalue(':num', Session::getid());
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
     return $result;
@@ -87,7 +75,7 @@ class MapDatabaseModel extends DatabaseModel
     $query->bindvalue(':id', $ID);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
-    
+
     if(!$result)
       return false;
     return true;

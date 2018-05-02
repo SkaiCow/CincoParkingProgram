@@ -94,6 +94,18 @@ class StudentsController extends Controller
 		}
 	}
 
+	public function changespot()
+	{
+		if(Session::isLoggedIn())
+		{
+			if(!Session::isAdmin())
+			{
+				(new StudentsDatabaseModel())->changeSpot();
+				header("Location: /?p=students");
+			}
+		}
+	}
+
 	public function enterInfo()
 	{
 		$info = array();

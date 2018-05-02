@@ -5,5 +5,10 @@ function askForApproval()
 
 function resetInfo()
 {
-  window.location.replace("/?p=students&do=resetinfo")
+  window.location.replace("/?p=students&do=resetinfo");
+}
+
+function changeSpot()
+{
+  window.location.replace("/?p=students&do=changespot");
 }
