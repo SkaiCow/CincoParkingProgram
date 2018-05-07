@@ -37,14 +37,14 @@ class MapDatabaseModel extends DatabaseModel
     return $result;
   }
 
-  public function addRowToDB($x,$y,$width,$height,$spot_num,$num_of_spots,$spacing)
+  public function addRowToDB($x,$y,$width,$height,$spot_num,$num_of_spots,$spacing,$lot)
   {
     $query = self::$conn->prepare(
       'INSERT INTO spot_data (spot_number,lot,width,height,pos_x,pos_y,statues,taken_id,color)' .
-      'VALUES (?,"paclot",?,?,?,?,0,0,null);');
+      'VALUES (?,?,?,?,?,?,0,0,null);');
     for($i = $spot_num;$i<$spot_num+$num_of_spots;$i++)
     {
-      $data = array($i, $width, $height, $x-($spot_num-$i)*$spacing,$y);
+      $data = array($i,$lot , $width, $height, $x-($spot_num-$i)*$spacing,$y);
       $query->execute($data);
     }
   }

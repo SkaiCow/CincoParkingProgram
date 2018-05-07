@@ -53,6 +53,7 @@ class MapView extends StudentsPageView
             </div>
           </div>
         </center>
+        <button type="button" onclick="addRow()">Click me</button>
       </div>
     </div>
   </div>

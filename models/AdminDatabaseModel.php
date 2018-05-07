@@ -102,5 +102,16 @@ class AdminDatabaseModel extends DatabaseModel
     $query->bindvalue(':color', $color);
     $query->execute();
   }
+
+  public function openSpot($num)
+  {
+    $query = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = 0, taken_id = DEFAULT, color = DEFAULT '.
+      'WHERE spot_number = :num'
+    );
+    $query->bindvalue(':num', $num, PDO::PARAM_INT);
+    $query->execute();
+  }
 }
 ?>
