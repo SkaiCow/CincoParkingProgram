@@ -10,7 +10,8 @@ class StartView extends AdminPageView
         <h2>Welcome to the CRHS parking admin panel</h2>
         <div class="enterId-container">
           <h3>Parking Stats</h3>
-          <h4>Number of free spots: <?= (new StatsDatabaseModel())->openSpotsLeft()?>
+          <h4>Number of free spots: <?= (new StatsDatabaseModel())->openSpotsLeft()?></h4>
+          <h4>Number of taken spots: <?= (new StatsDatabaseModel())->takenSpots()?></h4>
         </div>
       </div>
     </div>
