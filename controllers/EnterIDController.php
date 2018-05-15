@@ -11,51 +11,64 @@ class EnterIDController extends Controller
 
 	public function submit()
 	{
-		if($_POST["id"] != "")
-		{
-			$id = $_POST["id"];
-			lcfirst($id);
-			trim($id," ");
-			$goodID = TRUE;
-			if(!ctype_alpha($id[0]))
+		if(Session::isAdmin())
+			if($_POST["id"] != "")
 			{
-				$goodID = FALSE;
-			}
-
-			for($i = 1; $i < strlen($id); $i++)
-			{
-				$char = $id[$i];
-				if(!is_numeric($char))
+				$id = $_POST["id"];
+				lcfirst($id);
+				trim($id," ");
+				$goodID = TRUE;
+				if(!ctype_alpha($id[0]))
 				{
 					$goodID = FALSE;
 				}
-			}
 
-			if(strlen($id) != 8)
-			{
-				$goodID = FALSE;
-			}
+				for($i = 1; $i < strlen($id); $i++)
+				{
+					$char = $id[$i];
+					if(!is_numeric($char))
+					{
+						$goodID = FALSE;
+					}
+				}
 
-			if((new StudentsDatabaseModel())->getStudent($id)['student_id'] == $id)
-			{
-				$goodID = FALSE;
-			}
-			echo $goodID == FALSE ? "False" : "True";
-			
-			if($goodID)
-			{
-				(new StudentsDatabaseModel())->addStudent($id);
-				header("Location: /?p=enterID&do=display");
+				if(strlen($id) != 8)
+				{
+					$goodID = FALSE;
+				}
+
+				if((new StudentsDatabaseModel())->getStudent($id)['student_id'] == $id)
+				{
+					$goodID = FALSE;
+				}
+				echo $goodID == FALSE ? "False" : "True";
+
+				if($goodID)
+				{
+					(new StudentsDatabaseModel())->addStudent($id);
+					header("Location: /?p=enterID&do=display");
+				}
+				else
+				{
+					header("Location: /?p=enterID&message=badid");
+				}
 			}
 			else
 			{
-				header("Location: /?p=error&message=badid");
+				header("Location: /?p=enterID&message=noidenter");
 			}
+		else
+	 		header("Location: /?p=login");
+	}
+
+	public function kick()
+	{
+		if(Session::isAdmin())
+		{
+			(new AdminDatabaseModel())->kickStudent($_POST['student_id']);
 		}
 		else
-		{
-			header("Location: /?p=error&message=noidenter");
-		}
+			header("Location: /?p=login");
 	}
 }
  ?>

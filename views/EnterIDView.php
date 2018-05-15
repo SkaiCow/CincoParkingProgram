@@ -15,7 +15,27 @@ class EnterIDView extends AdminPageView
 					</form><br>
 				</div>
 				<div class="enterId-view-container" style="padding-bottom:20px;">
-					<h4>Students in list</h4><br>
+					<?php
+						if(isset($_GET['message']))
+						{
+					?>
+						<div class="enterID-error"><p>
+							<?php
+								switch($_GET['message'])
+								{
+									case 'badid':
+										echo("For some reason what you entered is not a valid ID number. Try entering it again, or putting it in manualy.");
+									break;
+									case 'noidenter':
+										echo("umm... You didn't enter an id. Maybe try entering the id manualy.");
+									break;
+								}
+							?>
+						</p></div>
+					<?php
+						}
+					?>
+					<h4>Students in list </h4><br>
 					<table class="enterID-entry-table">
 						<?php
 						if($students == 'none')
@@ -27,7 +47,7 @@ class EnterIDView extends AdminPageView
 							foreach ($students as $student)
 							{ ?>
 								<tr class="enterID-entry-row">
-									<td><img src="/images/exit.png" height="20px" width="20px"></td>
+									<td><img src="/images/exit.png" height="20px" width="20px" class="enterID-kick" id="<?= $student['student_id']?>"></td>
 									<td><p><?= ucfirst($student['student_id'])?></p></td>
 								</tr>
 								<?php

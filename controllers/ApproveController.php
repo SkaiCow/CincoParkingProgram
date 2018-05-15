@@ -13,7 +13,11 @@ class ApproveController extends Controller
   public function approve()
   {
   	if(Session::isAdmin())
-    	(new AdminDatabaseModel())->approve($_POST['student_id']);
+    {
+      (new AdminDatabaseModel())->approve($_POST['student_id']);
+      $student = (new StudentsDatabaseModel())->getStudent($_POST['student_id']);
+      (new AdminDatabaseModel())->takeSpotById($_POST['student_id']);
+    }
     else
     	header("Location: /?p=login");
   }

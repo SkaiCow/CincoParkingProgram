@@ -28,11 +28,12 @@ class ApproveView extends AdminPageView
               </tr>
             <?php
               foreach ($requests as $student) {
+                $spot = (new MapDatabaseModel())->getSpotByStudent($student['student_id']);
                 ?>
                 <tr class="approve-table-body">
                   <td><?= $student['name_first']?> <?= $student['name_last']?></td>
                   <td><?= $student['grade']?></td>
-                  <td><?= (new MapDatabaseModel())->getSpotByStudent($student['student_id'])['spot_number'] ?></td>
+                  <td><?= $spot['spot_number']?></td>
                   <td><?= $student['name_spot']?></td>
                   <td>
                     <div class="approve-yes" id="<?= $student['student_id']?>">

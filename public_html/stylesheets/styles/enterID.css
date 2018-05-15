@@ -38,3 +38,19 @@
 {
   border-collapse: collapse;
 }
+
+.enterID-error
+{
+  border: 3px solid red;
+  border-radius: 3px;
+  background-color: #ffc3bf;
+  margin: 10px 30px;
+  padding: 10px 20px;
+  width: 50%;
+  color: grey;
+}
+
+.enterID-kick
+{
+  cursor: pointer;
+}

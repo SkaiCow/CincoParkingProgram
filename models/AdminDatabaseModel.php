@@ -95,5 +95,34 @@ class AdminDatabaseModel extends DatabaseModel
     $query->bindvalue(':color', $color);
     $query->execute();
   }
+
+  public function takeSpotById($id)
+  {
+    $query = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = 2 '.
+      'WHERE taken_id = :id'
+    );
+    $query->bindvalue(':id', $id);
+    $query->execute();
+  }
+
+  public function kickStudent($id)
+  {
+    $query = self::$conn->prepare(
+      'DELETE FROM students '.
+      'WHERE student_id = :id'
+    );
+    $query->bindvalue(':id', $id);
+    $query->execute();
+
+    $query2 = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = 0, taken_id = DEFAULT, color = DEFAULT '.
+      'WHERE taken_id = :id'
+    );
+    $query2->bindvalue(':id', $id);
+    $query2->execute();
+  }
 }
 ?>

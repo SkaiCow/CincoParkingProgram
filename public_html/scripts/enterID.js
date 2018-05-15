@@ -1,16 +1,15 @@
 $(document).ready(function() {
-  $("#enterid-form").on("submit", function(event){
-    event.preventDefault()
-  });
 
-  $(document).on("click", ".login-button", function() {
+  $(".enterID-kick").click(function(){
+    console.log("ya this is going");
+    var values = {'student_id' : $(this).attr('id')};
     request = $.ajax({
-        url: "Admin/?p=login&do=login",
+        url: "/?p=enterID&do=kick",
         type: "post",
-        data: $('#ID').val();
+        data: values
     });
     request.done(function(response){
-      console.log("hey this works: "+response);
+      window.location.replace("/?p=enterID");
     });
   });
 

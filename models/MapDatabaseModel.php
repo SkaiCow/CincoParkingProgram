@@ -25,13 +25,13 @@ class MapDatabaseModel extends DatabaseModel
     return $result;
   }
 
-  public function getSpotByStudent($ID)
+  public function getSpotByStudent($id)
   {
     $query = self::$conn->prepare(
       'SELECT * ' .
       'FROM spot_data '.
       'WHERE taken_id = :num');
-    $query->bindvalue(':num', Session::getid());
+    $query->bindvalue(':num', $id);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
     return $result;

@@ -13,6 +13,7 @@ abstract class AdminPageView implements View
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="/scripts/navMenu.js"></script>
         <script type="text/javascript" src="/scripts/approve.js"></script>
+        <script type="text/javascript" src="/scripts/enterID.js"></script>
       </head>
   <?php }
 
