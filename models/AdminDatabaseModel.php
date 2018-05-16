@@ -71,6 +71,13 @@ class AdminDatabaseModel extends DatabaseModel
     );
     $query->bindvalue(':id', $id, PDO::PARAM_STR);
     $query->execute();
+    $query2 = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = 2 '.
+      'WHERE taken_id = :id'
+    );
+    $query2->bindvalue(':id', $id, PDO::PARAM_STR);
+    $query2->execute();
   }
 
   public function deny($id)
@@ -123,6 +130,15 @@ class AdminDatabaseModel extends DatabaseModel
     );
     $query2->bindvalue(':id', $id);
     $query2->execute();
+  public function openSpot($num)
+  {
+    $query = self::$conn->prepare(
+      'UPDATE spot_data '.
+      'SET statues = 0, taken_id = DEFAULT, color = DEFAULT '.
+      'WHERE spot_number = :num'
+    );
+    $query->bindvalue(':num', $num, PDO::PARAM_INT);
+    $query->execute();
   }
 }
 ?>

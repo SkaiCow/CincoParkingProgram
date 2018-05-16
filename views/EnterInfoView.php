@@ -29,7 +29,7 @@ class EnterInfoView extends StudentsPageView
 						<h4>Spot Info</h4>
 						<ul>
 							<li><p>Spot name: <input name="name_spot" placeholder="r3kle$s"></p></li>
-							<li><p>Sticker Number: <input name="sticker_number" placeholder="1234567"></p></li>
+							<!--<li><p>Sticker Number: <input name="sticker_number" placeholder="1234567"></p></li>-->
 						</ul>
 						<h4>Car Info</h4>
 						<ul>
@@ -56,7 +56,7 @@ class EnterInfoView extends StudentsPageView
 							<button class="info-button" type="submit" form="info" value="Submit"><h4 class="info-enter">Enter</h4></button>
 						</div>
 					</div>
-				</form>	
+				</form>
 			</div>
 		</div>
 		<?php

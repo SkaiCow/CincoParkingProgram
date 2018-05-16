@@ -128,10 +128,10 @@ class MapController extends Controller
 
 	public function addRow()
 	{
-		if(Session::isAdmin())
-		{
-			(new MapDatabaseModel())->addRowToDB($_POST['x'],$_POST['y'],$_POST['width'],$_POST['height'],$_POST['spot_num'],$_POST['num_of_spots'],$_POST['spacing']);
-		}
+		//if(Session::isAdmin())
+		//{
+			(new MapDatabaseModel())->addRowToDB($_POST['x'],$_POST['y'],$_POST['width'],$_POST['height'],$_POST['spot_num'],$_POST['num_of_spots'],$_POST['spacing'],$_POST['lot']);
+		//}
 	}
 	public function editRow()
 	{
@@ -147,4 +147,10 @@ class MapController extends Controller
     for($i = $_POST['start']; $i <= $_POST['finish']; $i++)
       (new AdminDatabaseModel())->takeSpot($i,$colors[rand(0,11)]);
   }
+
+	public function openspot()
+	{
+		for($i = $_POST['start']; $i <= $_POST['finish']; $i++)
+      (new AdminDatabaseModel())->openSpot($i);
+	}
 }

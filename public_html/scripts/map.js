@@ -39,13 +39,14 @@ $(document).ready(function() {
   {
     console.log("i am adding a row now!");
     var values = {
-      'x' : 47.31,
-      'y' : 77.3,
-      'width' : 1.7,
-      'height' : 5.8,
-      'spot_num' : 1289,
-      'num_of_spots' : 8,
-      'spacing' : 2.03
+      'x' : 57.47,
+      'y' : 87.6,
+      'width' : 1.4,
+      'height' : 3,
+      'spot_num' : 701,
+      'num_of_spots' : 22,
+      'spacing' : 1.73,
+      'lot' : "seniorlot"
     };
     request = $.ajax({
       type: "post",
@@ -53,7 +54,7 @@ $(document).ready(function() {
       data: values
     });
     request.done(function (){
-      window.location.replace("/?p=map&do=paclot");
+      window.location.replace("/?p=map&do="+values['lot']);
     });
   }
 
@@ -83,12 +84,29 @@ $(document).ready(function() {
   {
     console.log("i am editing rows now!");
     var values = {
-      'start' : 16,
-      'finish' : 17
+      'start' : 30,
+      'finish' : 30
     };
     request = $.ajax({
       type: "post",
       url: "/?p=map&do=takespots",
+      data: values
+    });
+    request.done(function (){
+      window.location.replace("/?p=map");
+    });
+  }
+
+  function openSpot()
+  {
+    console.log("i am opening spots now!");
+    var values = {
+      'start' : 1014,
+      'finish' : 1029
+    };
+    request = $.ajax({
+      type: "post",
+      url: "/?p=map&do=openspot",
       data: values
     });
     request.done(function (){

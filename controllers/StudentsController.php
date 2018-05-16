@@ -32,7 +32,7 @@ class StudentsController extends Controller
 					header("Location: /?p=students");
 				else
 					if((new MapDatabaseModel())->hasSpot(Session::getId()))
-						if(Session::getStudent()['approved'] == 1)
+						if(Session::getStudent()['approved'] == 1 || Session::getStudent()['approved'] == 2)
 							header("Location: /?p=students&do=wait");
 						else
 							(new DoneView())->render();
