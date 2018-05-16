@@ -130,6 +130,7 @@ class AdminDatabaseModel extends DatabaseModel
     );
     $query2->bindvalue(':id', $id);
     $query2->execute();
+  }
   public function openSpot($num)
   {
     $query = self::$conn->prepare(

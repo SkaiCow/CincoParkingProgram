@@ -10,8 +10,8 @@ class EnterIDView extends AdminPageView
 				<div class="enterId-container">
 					<h3>Add student to list</h3>
 					<form id="enterid-form" method="post" action="/?p=enterID&do=submit">
-						<input class="enterID-input" placeholder="A1000000" name="id">
-						<input type="submit" value="Submit">
+						<input class="enterID-input" placeholder="A1000000" name="id" autofocus>
+						<input type="submit" value="Submit" id="submit">
 					</form><br>
 				</div>
 				<div class="enterId-view-container" style="padding-bottom:20px;">
