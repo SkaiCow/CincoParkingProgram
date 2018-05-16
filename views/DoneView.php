@@ -29,7 +29,7 @@ class DoneView extends StudentsPageView
             <ul>
               <li><p>Spot name: <b><?= $student['name_spot']?></b></p></li>
               <li><p>Spot name: <b>624</b></p></li>
-              <li><p>Sticker Number: <b><?= $student['sticker_number']?></b></p></li>
+              <!--<li><p>Sticker Number: <b><?= $student['sticker_number']?></b></p></li>-->
             </ul>
             <h4>Car Info</h4>
             <ul>

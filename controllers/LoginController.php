@@ -46,7 +46,8 @@ class LoginController extends Controller
 	public function login()
 	{
 		if(!isset($_POST['id']))
-			header("Location: /?p=error&message=nousername");
+			header("Location: /?p=login");
+			//header("Location: /?p=error&message=nousername");
 
 		$student = (new StudentsDatabaseModel())->getStudent($_POST['id']);
 
@@ -57,7 +58,8 @@ class LoginController extends Controller
 		}
 		else
 		{
-			header("Location: /?p=error&message=incorrectusername");
+			header("Location: /?p=login");
+			//header("Location: /?p=error&message=incorrectusername");
 		}
 	}
 
