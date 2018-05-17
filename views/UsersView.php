@@ -45,7 +45,7 @@ class UsersView extends AdminPageView
             </div>
           </center>
         </div>
-        <h3>View student list</h3>
+        <h3>View student list  <a href="/?p=user&do=downloadcsv">Download List</a></h3>
         <table class="users-table">
           <tr class="users-table-header">
             <th></th>

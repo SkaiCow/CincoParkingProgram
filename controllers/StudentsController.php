@@ -108,22 +108,31 @@ class StudentsController extends Controller
 
 	public function enterInfo()
 	{
-		$info = array();
-
-		foreach($_POST as $key => $value)
+		if(Session::isLoggedIn())
 		{
-			if($value != '')
-				$info[$key] = $value;
-			else
+			if(!Session::isAdmin())
 			{
-				header("Location: /?p=error&message=nostudentinfo");
+				$info = array();
+				$good = true;
+				foreach($_POST as $key => $value)
+				{
+					if($value != '' && $value != null && isset($value))
+					$info[$key] = $value;
+					else
+					{
+						$good = false;
+						header("Location: /?p=students&message=nostudentinfo");
+					}
+				}
+				if($good)
+				foreach($info as $key => $value)
+				{
+					(new StudentsDatabaseModel())->editStudent(Session::getId(), $key, $value);
+				}
+				header("Location: /?p=map");
 			}
 		}
-
-		foreach($info as $key => $value)
-		{
-			(new StudentsDatabaseModel())->editStudent(Session::getId(), $key, $value);
-		}
-		header("Location: /?p=map");
+		else
+			header("Location: /?p=login");
 	}
 }

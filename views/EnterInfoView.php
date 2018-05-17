@@ -12,6 +12,23 @@ class EnterInfoView extends StudentsPageView
 					<h3>Enter Your Info</h3>
 					<div class="Info-container">
 						<h4>Student Info</h4>
+						<?php
+							if(isset($_GET['message']))
+							{
+						?>
+							<div class="enterID-error"><p>
+								<?php
+									switch($_GET['message'])
+									{
+										case 'nostudentinfo':
+											echo("You left a field blank. please fill all information then enter again.");
+										break;
+									}
+								?>
+							</p></div>
+						<?php
+							}
+						?>
 						<ul>
 							<li><p>First name: <input name="name_first" placeholder="William"></p></li>
 							<li><p>Last name: <input name="name_last" placeholder="Lasater"></p></li>
