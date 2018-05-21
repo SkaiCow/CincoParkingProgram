@@ -44,7 +44,7 @@ class MapView extends StudentsPageView
                     else
                     {
                       ?>
-                      <img src="/images/cars/<?= $spot['color']?>car.png" class="map-car"  style="top:<?= $spot['pos_y']?>%;left:<?= $spot['pos_x']?>%;width:<?= $spot['width']+.4?>%;height:<?= $spot['height']+.2?>%;">
+                      <img src="/images/cars/<?= lcfirst($spot['color'])?>car.png" class="map-car"  style="top:<?= $spot['pos_y']?>%;left:<?= $spot['pos_x']?>%;width:<?= $spot['width']+.4?>%;height:<?= $spot['height']+.2?>%;">
                       <?php
                     }
                   }
@@ -53,7 +53,6 @@ class MapView extends StudentsPageView
             </div>
           </div>
         </center>
-        <button type="button" onclick="addRow()">Click me</button>
       </div>
     </div>
   </div>
